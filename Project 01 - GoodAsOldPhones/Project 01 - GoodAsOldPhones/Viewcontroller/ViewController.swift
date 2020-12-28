@@ -46,13 +46,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    //실패한 코드!!!
+    //다음 뷰 컨트롤러에 데이터를 보내려면 prepare 메서드에서 해야지
+    //여기서 하면 해당 파일 안에서만 vc의 프로퍼티 값이 변경되고, 우리가 원하는 다음 뷰컨에서는 바뀌지 않음
+    
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        self.itemNumber = indexPath.row
 //        guard let vc: DetailViewController = self.storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController else {return}
 //        guard let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else { return }
-////
-////        vc.cellItem = self.itemNumber
-////        vc.cellTitle = cell.cellTitle.text
+//
+//        print(itemNumber)
+//        vc.cellImage = self.itemNumber
+//        vc.cellTitle = cell.cellTitle.text
 //    }
     
 }

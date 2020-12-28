@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         titleLabel.text = cellTitle
         backgroundImage.image = imageData[cellImage ?? 0]
     }
