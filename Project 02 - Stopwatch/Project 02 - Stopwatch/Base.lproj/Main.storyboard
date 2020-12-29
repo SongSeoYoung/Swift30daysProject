@@ -37,6 +37,9 @@
                                 <state key="selected" title="Lap">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="ResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lvs-Zq-cDt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoT-O2-Q9d">
                                 <rect key="frame" x="281" y="287" width="38" height="33"/>
@@ -47,12 +50,15 @@
                                 <state key="selected" title="Stop">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="StartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLD-rm-VcC"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sr5-s7-zOA">
                                 <rect key="frame" x="0.0" y="358" width="414" height="538"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="eez-FC-4f1" detailTextLabel="A1b-AJ-8Mf" style="IBUITableViewCellStyleValue1" id="ZzL-gy-hdK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LapTableViewCell" textLabel="eez-FC-4f1" detailTextLabel="A1b-AJ-8Mf" style="IBUITableViewCellStyleValue1" id="ZzL-gy-hdK" customClass="LapTableViewCell" customModule="Project_02___Stopwatch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZzL-gy-hdK" id="5MK-DV-OWH">
@@ -75,6 +81,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countTitle" destination="A1b-AJ-8Mf" id="FWP-SO-1Kk"/>
+                                            <outlet property="lapTitle" destination="eez-FC-4f1" id="Vj2-4p-XXH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -101,6 +111,13 @@
                             <constraint firstItem="sr5-s7-zOA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wad-ew-KN6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ResetLapBtn" destination="EMW-8m-fUe" id="DXc-7q-jNN"/>
+                        <outlet property="countLabel1" destination="4n8-dT-TkB" id="mrg-wB-P59"/>
+                        <outlet property="countLabel2" destination="QYx-QN-cyF" id="haC-wy-jyA"/>
+                        <outlet property="startStopBtn" destination="hoT-O2-Q9d" id="rG3-Nb-GKp"/>
+                        <outlet property="tableView" destination="sr5-s7-zOA" id="bMD-uC-njH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
