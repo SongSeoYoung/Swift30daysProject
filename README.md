@@ -23,5 +23,5 @@ https://github.com/soapyigu/Swift-30-Projects 순서대로 진행👩‍💻
     * **Screenshot✨**  
       <img src ="https://user-images.githubusercontent.com/42825223/103270407-2d444580-49fb-11eb-96b7-cf95f7cb85a1.gif" width="200" height="400"></img>  
 
-    * [배운 점 정리]()
+    * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2002%20-%20Stopwatch)
 
