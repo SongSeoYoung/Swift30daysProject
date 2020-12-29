@@ -16,22 +16,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var ResetLapBtn: UIButton!
     
     private var lapData:[LapData] = []
-    var timer = Timer()
-    var smallTimer = Timer()
-    var number = 0
-    var play: Bool = false
-    var resetCheck: Bool = false
-    var counter: Int = 0
-    var currentTime: String?
-    var number2 = 0
-    var lapCheck: Bool = false {
+    private var timer = Timer()
+    private var smallTimer = Timer()
+    private var number = 0
+    private var play: Bool = false
+    private var resetCheck: Bool = false
+    private var counter: Int = 0
+    private var currentTime: String?
+    private var number2 = 0
+    private var lapCheck: Bool = false {
         didSet{
             print("lap check is changed")
             number2 = 0
             var array: [String] = ["00", "00"]
             array = makeTimeLabel(number: number2)
             print(array)
-            countLabel2.text = String("00:\(array[0]).\(array[1])")
+            countLabel2.text = String("\(array[0]):\(array[1]).\(array[2])")
         }
     }
     override func viewDidLoad() {
@@ -84,25 +84,26 @@ class ViewController: UIViewController {
 
     }
     
+    //메인 타이머 콜백함수
     @objc func timerCallBack() {
         var array: [String] = ["00", "00", "00"]
         number += 1
         array = makeTimeLabel(number: number)
-        countLabel1.text = String("00:\(array[0]).\(array[1])")
-        countLabel2.text = String("00:\(array[0]).\(array[1])")
+        countLabel1.text = String("\(array[0]):\(array[1]).\(array[2])")
+        countLabel2.text = String("\(array[0]):\(array[1]).\(array[2])")
     }
-    
+    //lap 용 타이머 콜백함수
     @objc func smallTimercallBack() {
         var array: [String] = ["00", "00", "00"]
         number2 += 1
         array = makeTimeLabel(number: number2)
-        countLabel2.text = String("00:\(array[0]).\(array[1])")
+        countLabel2.text = String("\(array[0]):\(array[1]).\(array[2])")
     }
     
     //00:00.00 에 맞춰서 보여질 수 있도록 변환
-    func makeTimeLabel(number: Int) -> ([String]){
+    private func makeTimeLabel(number: Int) -> ([String]){
         var array: [String] = []
-        
+        //밀리세컨트
         var smallSec1 = number / 10
         if smallSec1 >=  100 {
             smallSec1 = smallSec1 % 100
@@ -114,7 +115,7 @@ class ViewController: UIViewController {
             smallSec = String(smallSec1)
         }
         
-        
+        //세컨드
         let sec = (number / 100) % 60
         let realSec: String?
         if sec < 10{
@@ -122,6 +123,15 @@ class ViewController: UIViewController {
         }else{
             realSec = String(sec)
         }
+        
+        let min: Int = (number / 100 ) / 60
+        let realMin: String?
+        if min < 10 {
+            realMin = String("0\(min)")
+        }else{
+            realMin = String(min)
+        }
+        array.append(realMin ?? "00")
         array.append(realSec ?? "00")
         array.append(smallSec ?? "00")
         return array
@@ -143,8 +153,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         cell.countTitle.text = lapData[indexPath.row].LapTime
         cell.lapTitle.text = lapData[indexPath.row].LapTitle
         return cell
-        
     }
-    
-    
 }
