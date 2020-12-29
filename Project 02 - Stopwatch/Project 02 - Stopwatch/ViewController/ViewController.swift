@@ -26,30 +26,33 @@ class ViewController: UIViewController {
     private var number2 = 0
     private var lapCheck: Bool = false {
         didSet{
-            print("lap check is changed")
             number2 = 0
             var array: [String] = ["00", "00"]
             array = makeTimeLabel(number: number2)
-            print(array)
             countLabel2.text = String("\(array[0]):\(array[1]).\(array[2])")
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
     }
 
+    
+    //MARK: -IBAction
     @IBAction private func ResetBtn(_ sender: UIButton) {
-        //reset 시키자
+        //reset
         if ResetLapBtn.title(for: .normal) == "Reset" {
             countLabel1.text = "00:00.00"
             number = 0
             lapData = []
             counter = 0
             tableView.reloadData()
+            countLabel2.text = "00:00.00"
+            number2 = 0
         }
-        //lap 추가하자
+        //lap 추가
         else{
             counter += 1
             lapData.append(
@@ -61,7 +64,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func StartBtn(_ sender: UIButton) {
-        //타이머가 작동되지 않고 있을 때 누르는 경우
+        //타이머가 작동되지 않고 있을 때 누르는 경우 -> timer1&2 start, change label text
         if play == false{
             startStopBtn.setTitle("Stop", for: .normal)
             ResetLapBtn.setTitle("Lap", for: .normal)
@@ -73,7 +76,7 @@ class ViewController: UIViewController {
                 smallTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(smallTimercallBack), userInfo: nil, repeats: true)
             }
         }
-        //타이머가 작동되고있을 때 누르는 경우
+        //타이머가 작동되고있을 때 누르는 경우 -> stop action, change label text
         else{
             timer.invalidate()
             smallTimer.invalidate()
@@ -84,6 +87,7 @@ class ViewController: UIViewController {
 
     }
     
+    //MARK:- call back function
     //메인 타이머 콜백함수
     @objc func timerCallBack() {
         var array: [String] = ["00", "00", "00"]
@@ -100,10 +104,12 @@ class ViewController: UIViewController {
         countLabel2.text = String("\(array[0]):\(array[1]).\(array[2])")
     }
     
+    
+    //MARK:- custom function
     //00:00.00 에 맞춰서 보여질 수 있도록 변환
     private func makeTimeLabel(number: Int) -> ([String]){
         var array: [String] = []
-        //밀리세컨트
+        //밀리세컨드
         var smallSec1 = number / 10
         if smallSec1 >=  100 {
             smallSec1 = smallSec1 % 100
@@ -124,6 +130,7 @@ class ViewController: UIViewController {
             realSec = String(sec)
         }
         
+        //미닛
         let min: Int = (number / 100 ) / 60
         let realMin: String?
         if min < 10 {
