@@ -34,12 +34,13 @@
                                     <constraint firstItem="6ba-Cn-pw4" firstAttribute="top" secondItem="4hn-4y-ymj" secondAttribute="top" constant="80" id="nJn-m3-TAS"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SpE-Ie-4W0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SpE-Ie-4W0">
                                 <rect key="frame" x="0.0" y="125" width="414" height="771"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="103" id="17F-hD-sEX">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="103"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" rowHeight="103" id="17F-hD-sEX" customClass="ProfileTableViewCell" customModule="Project_03___FacebookMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="17F-hD-sEX" id="qMc-rh-agk">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="103"/>
@@ -78,8 +79,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="jAL-xA-MUw" style="IBUITableViewCellStyleDefault" id="Fi5-Sd-k2C">
-                                        <rect key="frame" x="0.0" y="131" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicTableViewCell" textLabel="jAL-xA-MUw" style="IBUITableViewCellStyleDefault" id="Fi5-Sd-k2C">
+                                        <rect key="frame" x="0.0" y="158.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fi5-Sd-k2C" id="wob-Zk-r8l">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -95,8 +96,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="62" id="igq-b7-kVI">
-                                        <rect key="frame" x="0.0" y="174.5" width="414" height="62"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="62" id="igq-b7-kVI" customClass="CustomTableViewCell" customModule="Project_03___FacebookMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="202" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="igq-b7-kVI" id="Btk-zf-jS5">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="62"/>
@@ -125,8 +126,16 @@
                                                 <constraint firstItem="0Ml-0W-BF5" firstAttribute="leading" secondItem="Btk-zf-jS5" secondAttribute="leading" constant="20" id="wsa-am-19j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImage" destination="0Ml-0W-BF5" id="ixm-CR-Skx"/>
+                                            <outlet property="cellLabel" destination="Ba8-p9-9tq" id="CdS-XA-Pcj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ncw-ix-bjO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bcw-lO-7dw"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -142,6 +151,9 @@
                             <constraint firstItem="4hn-4y-ymj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yDn-r9-rMt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="SpE-Ie-4W0" id="jLK-ig-HLY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,6 +168,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
