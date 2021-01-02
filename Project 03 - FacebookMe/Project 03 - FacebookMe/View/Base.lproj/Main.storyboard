@@ -29,9 +29,10 @@
                                 </subviews>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="6ba-Cn-pw4" secondAttribute="bottom" constant="21" id="P65-gb-nOE"/>
-                                    <constraint firstItem="6ba-Cn-pw4" firstAttribute="centerX" secondItem="4hn-4y-ymj" secondAttribute="centerX" id="avB-K6-IrP"/>
-                                    <constraint firstItem="6ba-Cn-pw4" firstAttribute="top" secondItem="4hn-4y-ymj" secondAttribute="top" constant="80" id="nJn-m3-TAS"/>
+                                    <constraint firstAttribute="trailing" secondItem="6ba-Cn-pw4" secondAttribute="trailing" constant="161" id="4ac-fW-deg"/>
+                                    <constraint firstItem="6ba-Cn-pw4" firstAttribute="top" secondItem="4hn-4y-ymj" secondAttribute="top" constant="80" id="QCu-VJ-0fH"/>
+                                    <constraint firstItem="6ba-Cn-pw4" firstAttribute="leading" secondItem="4hn-4y-ymj" secondAttribute="leading" constant="161" id="Ums-ze-JSR"/>
+                                    <constraint firstAttribute="bottom" secondItem="6ba-Cn-pw4" secondAttribute="bottom" constant="21" id="tuJ-iJ-fLJ"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SpE-Ie-4W0">
@@ -39,48 +40,48 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" rowHeight="103" id="17F-hD-sEX" customClass="ProfileTableViewCell" customModule="Project_03___FacebookMe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="103"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" rowHeight="94" id="17F-hD-sEX" customClass="ProfileTableViewCell" customModule="Project_03___FacebookMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="17F-hD-sEX" id="qMc-rh-agk">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="103"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bayMax" translatesAutoresizingMaskIntoConstraints="NO" id="Zzj-MB-fkV">
-                                                    <rect key="frame" x="20" y="11" width="99" height="81"/>
+                                                    <rect key="frame" x="20" y="10" width="74" height="74"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Zzj-MB-fkV" secondAttribute="height" multiplier="11:9" id="ePC-RU-Oba"/>
+                                                        <constraint firstAttribute="width" secondItem="Zzj-MB-fkV" secondAttribute="height" multiplier="1:1" id="7R5-Nf-oXE"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BayMax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etx-Gr-gPn">
-                                                    <rect key="frame" x="139" y="30" width="224" height="23"/>
+                                                    <rect key="frame" x="104" y="20" width="209" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View your profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqr-Sd-Gtk">
-                                                    <rect key="frame" x="139" y="59" width="224" height="18"/>
+                                                    <rect key="frame" x="104" y="49" width="249" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Zzj-MB-fkV" firstAttribute="leading" secondItem="qMc-rh-agk" secondAttribute="leading" constant="20" id="1QC-Yn-agi"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="cqr-Sd-Gtk" secondAttribute="trailing" constant="20" id="1gu-xZ-RO4"/>
-                                                <constraint firstItem="cqr-Sd-Gtk" firstAttribute="top" secondItem="Etx-Gr-gPn" secondAttribute="bottom" constant="6" id="9u1-m4-pbe"/>
-                                                <constraint firstAttribute="bottom" secondItem="Zzj-MB-fkV" secondAttribute="bottom" constant="11" id="DLJ-id-Vr7"/>
-                                                <constraint firstItem="cqr-Sd-Gtk" firstAttribute="leading" secondItem="Etx-Gr-gPn" secondAttribute="leading" id="W4P-vS-ZIB"/>
-                                                <constraint firstItem="Etx-Gr-gPn" firstAttribute="top" secondItem="qMc-rh-agk" secondAttribute="top" constant="30" id="dL8-79-tA1"/>
-                                                <constraint firstItem="Etx-Gr-gPn" firstAttribute="leading" secondItem="Zzj-MB-fkV" secondAttribute="trailing" constant="20" id="hA8-dp-Hfh"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Etx-Gr-gPn" secondAttribute="trailing" constant="20" id="jA9-HL-Bu8"/>
-                                                <constraint firstAttribute="bottom" secondItem="cqr-Sd-Gtk" secondAttribute="bottom" constant="26" id="jrT-Bz-oyc"/>
-                                                <constraint firstItem="Zzj-MB-fkV" firstAttribute="top" secondItem="qMc-rh-agk" secondAttribute="top" constant="11" id="nHP-cc-PfM"/>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="cqr-Sd-Gtk" secondAttribute="trailing" constant="30" id="FcA-mS-dJK"/>
+                                                <constraint firstItem="cqr-Sd-Gtk" firstAttribute="top" secondItem="Etx-Gr-gPn" secondAttribute="bottom" constant="6" id="Hc2-ni-gKo"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zzj-MB-fkV" secondAttribute="bottom" constant="10" id="Kgg-Zt-piA"/>
+                                                <constraint firstItem="Zzj-MB-fkV" firstAttribute="leading" secondItem="qMc-rh-agk" secondAttribute="leading" constant="20" id="L3m-jm-Jf8"/>
+                                                <constraint firstItem="Etx-Gr-gPn" firstAttribute="top" secondItem="qMc-rh-agk" secondAttribute="top" constant="20" symbolic="YES" id="ORm-AV-BmA"/>
+                                                <constraint firstAttribute="trailing" secondItem="Etx-Gr-gPn" secondAttribute="trailing" constant="70" id="goU-Xa-Hbh"/>
+                                                <constraint firstItem="Etx-Gr-gPn" firstAttribute="leading" secondItem="Zzj-MB-fkV" secondAttribute="trailing" constant="10" id="jsK-1a-ejr"/>
+                                                <constraint firstItem="Zzj-MB-fkV" firstAttribute="top" secondItem="qMc-rh-agk" secondAttribute="top" constant="10" id="rMk-z9-xQP"/>
+                                                <constraint firstItem="cqr-Sd-Gtk" firstAttribute="leading" secondItem="Zzj-MB-fkV" secondAttribute="trailing" constant="10" id="roJ-4a-sz5"/>
+                                                <constraint firstItem="cqr-Sd-Gtk" firstAttribute="leading" secondItem="Etx-Gr-gPn" secondAttribute="leading" id="vhd-1f-cIW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicTableViewCell" textLabel="jAL-xA-MUw" style="IBUITableViewCellStyleDefault" id="Fi5-Sd-k2C">
-                                        <rect key="frame" x="0.0" y="158.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="149.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fi5-Sd-k2C" id="wob-Zk-r8l">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -96,34 +97,34 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="62" id="igq-b7-kVI" customClass="CustomTableViewCell" customModule="Project_03___FacebookMe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="202" width="414" height="62"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="52" id="igq-b7-kVI" customClass="CustomTableViewCell" customModule="Project_03___FacebookMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="193" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="igq-b7-kVI" id="Btk-zf-jS5">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="62"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb_friends" translatesAutoresizingMaskIntoConstraints="NO" id="0Ml-0W-BF5">
-                                                    <rect key="frame" x="20" y="11" width="40" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="0Ml-0W-BF5" secondAttribute="height" multiplier="1:1" id="MeR-IJ-U2h"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba8-p9-9tq">
-                                                    <rect key="frame" x="80" y="20" width="283" height="22"/>
+                                                    <rect key="frame" x="69" y="13" width="284" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb_friends" translatesAutoresizingMaskIntoConstraints="NO" id="0Ml-0W-BF5">
+                                                    <rect key="frame" x="20" y="16" width="34" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="0Ml-0W-BF5" secondAttribute="height" multiplier="17:10" id="ekv-qL-uHH"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0Ml-0W-BF5" firstAttribute="top" secondItem="Btk-zf-jS5" secondAttribute="top" constant="11" id="8hs-p0-doN"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Ba8-p9-9tq" secondAttribute="trailing" constant="20" id="Ikg-Wv-pKe"/>
-                                                <constraint firstItem="Ba8-p9-9tq" firstAttribute="leading" secondItem="0Ml-0W-BF5" secondAttribute="trailing" constant="20" id="Yee-iX-aed"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ba8-p9-9tq" secondAttribute="bottom" constant="20" id="eCy-jQ-y8r"/>
-                                                <constraint firstAttribute="bottom" secondItem="0Ml-0W-BF5" secondAttribute="bottom" constant="11" id="gN4-fV-PZW"/>
-                                                <constraint firstItem="Ba8-p9-9tq" firstAttribute="top" secondItem="Btk-zf-jS5" secondAttribute="top" constant="20" id="ke1-ju-qWc"/>
-                                                <constraint firstItem="0Ml-0W-BF5" firstAttribute="leading" secondItem="Btk-zf-jS5" secondAttribute="leading" constant="20" id="wsa-am-19j"/>
+                                                <constraint firstItem="Ba8-p9-9tq" firstAttribute="centerY" secondItem="Btk-zf-jS5" secondAttribute="centerY" id="2M8-mZ-Bxk"/>
+                                                <constraint firstItem="Ba8-p9-9tq" firstAttribute="top" secondItem="Btk-zf-jS5" secondAttribute="top" constant="13" id="Ggr-9c-M5O"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ba8-p9-9tq" secondAttribute="bottom" constant="13" id="Pra-QW-CZI"/>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Ba8-p9-9tq" secondAttribute="trailing" constant="30" id="czt-Jx-I7e"/>
+                                                <constraint firstItem="Ba8-p9-9tq" firstAttribute="leading" secondItem="0Ml-0W-BF5" secondAttribute="trailing" constant="15" id="dnb-t2-Ocp"/>
+                                                <constraint firstItem="0Ml-0W-BF5" firstAttribute="leading" secondItem="Btk-zf-jS5" secondAttribute="leading" constant="20" id="lCG-3K-MZ7"/>
+                                                <constraint firstItem="0Ml-0W-BF5" firstAttribute="centerY" secondItem="Btk-zf-jS5" secondAttribute="centerY" id="zVX-H7-Ydu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -141,14 +142,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SpE-Ie-4W0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fzh-Ar-D1N"/>
-                            <constraint firstItem="SpE-Ie-4W0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rm7-Xl-3uG"/>
-                            <constraint firstAttribute="bottom" secondItem="SpE-Ie-4W0" secondAttribute="bottom" id="ST0-zO-RsY"/>
-                            <constraint firstItem="4hn-4y-ymj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fiv-u0-Szi"/>
-                            <constraint firstItem="SpE-Ie-4W0" firstAttribute="top" secondItem="4hn-4y-ymj" secondAttribute="bottom" id="gSb-kD-xk7"/>
-                            <constraint firstItem="SpE-Ie-4W0" firstAttribute="top" secondItem="4hn-4y-ymj" secondAttribute="bottom" id="o66-Ot-kpF"/>
-                            <constraint firstItem="4hn-4y-ymj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xEl-14-rtD"/>
-                            <constraint firstItem="4hn-4y-ymj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yDn-r9-rMt"/>
+                            <constraint firstItem="SpE-Ie-4W0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5No-tJ-mP0"/>
+                            <constraint firstItem="SpE-Ie-4W0" firstAttribute="top" secondItem="4hn-4y-ymj" secondAttribute="bottom" id="5uu-oR-bYM"/>
+                            <constraint firstItem="SpE-Ie-4W0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AuP-xd-UBu"/>
+                            <constraint firstItem="4hn-4y-ymj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bxm-4T-Vjw"/>
+                            <constraint firstItem="4hn-4y-ymj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qr2-Ct-d67"/>
+                            <constraint firstItem="SpE-Ie-4W0" firstAttribute="top" secondItem="4hn-4y-ymj" secondAttribute="bottom" id="awM-Dr-FKT"/>
+                            <constraint firstItem="4hn-4y-ymj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cci-Sv-ltN"/>
+                            <constraint firstAttribute="bottom" secondItem="SpE-Ie-4W0" secondAttribute="bottom" id="wEF-7K-fXl"/>
                         </constraints>
                     </view>
                     <connections>

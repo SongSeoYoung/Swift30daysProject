@@ -20,7 +20,7 @@ let data2: [Model] = [
     Model("Add Favorites...", UIImage(named: "fb_placeholder")!)
 ]
 let data3: [Model] = [
-    Model("SEttings", UIImage(named: "fb_settings")!),
+    Model("Settings", UIImage(named: "fb_settings")!),
     Model("Privacy Shortcuts", UIImage(named: "fb_privacy_shortcuts")!),
     Model("Help and Support", UIImage(named: "fb_help_and_support")!)
 ]
