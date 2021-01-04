@@ -9,15 +9,15 @@ import UIKit
 
 class AddViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UITextField!
-    @IBOutlet weak var placeLabel: UITextField!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var descriptionLabel: UITextField!
-    @IBOutlet weak var saveBtn: UIButton!
-    var dateToString: String?
-    let dateFormatter: DateFormatter = {
+    @IBOutlet private weak var titleLabel: UITextField!
+    @IBOutlet private weak var placeLabel: UITextField!
+    @IBOutlet private weak var datePicker: UIDatePicker!
+    @IBOutlet private weak var descriptionLabel: UITextField!
+    @IBOutlet private weak var saveBtn: UIButton!
+    private var dateToString: String?
+    private let dateFormatter: DateFormatter = {
         let formatter: DateFormatter = DateFormatter()
-        formatter.dateFormat = "dd / mm / YYYY"
+        formatter.dateStyle = .short
         return formatter
     }()
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class AddViewController: UIViewController {
         initial()
         // Do any additional setup after loading the view.
     }
-    func initial(){
+    private func initial(){
         titleLabel.text = nil
         placeLabel.text = nil
         descriptionLabel.text = nil

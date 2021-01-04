@@ -1,9 +1,9 @@
 //___FILEHEADER___
 
 import XCTest
-
-class ___FILEBASENAMEASIDENTIFIER___: XCTestCase {
-
+import Project_04___TodoTDD
+class Project_04___TodoTDD: XCTestCase {
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -34,4 +34,10 @@ class ___FILEBASENAMEASIDENTIFIER___: XCTestCase {
             }
         }
     }
+    func testAddToDo() {
+        let app = XCUIApplication()
+        app.navigationBars["Project_04___TodoTDD.ViewController"].buttons["Add"].tap()
+        
+    }
 }
+

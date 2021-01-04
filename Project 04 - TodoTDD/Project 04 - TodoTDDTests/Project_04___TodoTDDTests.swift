@@ -1,9 +1,9 @@
 //___FILEHEADER___
 
 import XCTest
-@testable import ___VARIABLE_productName:identifier___
+@testable import Project_04___TodoTDD
 
-class ___FILEBASENAMEASIDENTIFIER___: XCTestCase {
+class Project_04___TodoTDD: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
