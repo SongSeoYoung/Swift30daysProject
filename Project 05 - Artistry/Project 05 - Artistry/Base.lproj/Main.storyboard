@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="436" id="CXf-Fa-XlW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistryTableViewCell" rowHeight="436" id="CXf-Fa-XlW" customClass="ArtistryTableViewCell" customModule="Project_05___Artistry" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="436"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CXf-Fa-XlW" id="CgP-NR-dBG">
@@ -28,10 +28,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kmy-W1-2hk">
-                                                    <rect key="frame" x="10" y="10" width="216" height="310"/>
+                                                    <rect key="frame" x="10" y="10" width="216" height="381"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuJ-gS-emY">
-                                                    <rect key="frame" x="10" y="325" width="216" height="30"/>
+                                                    <rect key="frame" x="10" y="396" width="216" height="30"/>
                                                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="f8q-eh-2bs"/>
@@ -45,7 +45,7 @@
                                                     </connections>
                                                 </button>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d0N-M2-n4C">
-                                                    <rect key="frame" x="236" y="10" width="168" height="345"/>
+                                                    <rect key="frame" x="236" y="10" width="168" height="416"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="168" id="s7s-ws-R7W"/>
@@ -64,11 +64,18 @@
                                                 <constraint firstItem="Kmy-W1-2hk" firstAttribute="leading" secondItem="CgP-NR-dBG" secondAttribute="leading" constant="10" id="VKf-vp-T4j"/>
                                                 <constraint firstItem="EuJ-gS-emY" firstAttribute="top" secondItem="Kmy-W1-2hk" secondAttribute="bottom" constant="5" id="VVH-fz-Db2"/>
                                                 <constraint firstItem="EuJ-gS-emY" firstAttribute="leading" secondItem="Kmy-W1-2hk" secondAttribute="leading" id="adz-v5-ark"/>
+                                                <constraint firstAttribute="bottom" secondItem="EuJ-gS-emY" secondAttribute="bottom" constant="10" id="cX9-fY-98n"/>
                                                 <constraint firstItem="d0N-M2-n4C" firstAttribute="top" secondItem="CgP-NR-dBG" secondAttribute="top" constant="10" id="i29-Gk-zfw"/>
                                                 <constraint firstItem="EuJ-gS-emY" firstAttribute="trailing" secondItem="Kmy-W1-2hk" secondAttribute="trailing" id="lck-2p-MqY"/>
                                                 <constraint firstAttribute="trailing" secondItem="d0N-M2-n4C" secondAttribute="trailing" constant="10" id="qRf-C7-hqy"/>
+                                                <constraint firstAttribute="bottom" secondItem="d0N-M2-n4C" secondAttribute="bottom" constant="10" id="zVD-aI-j6A"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistBio" destination="d0N-M2-n4C" id="plM-gg-SW5"/>
+                                            <outlet property="artistImg" destination="Kmy-W1-2hk" id="k0L-DT-9TN"/>
+                                            <outlet property="artistNameBtn" destination="EuJ-gS-emY" id="KKZ-eK-dpi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -87,15 +94,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Artistry" id="3WI-Xd-DJX"/>
+                    <connections>
+                        <outlet property="ArtistryTablleView" destination="jmH-yF-UTU" id="fTg-w8-0BL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="Xe8-zX-LTS">
             <objects>
-                <viewController id="abv-U3-emB" sceneMemberID="viewController">
+                <viewController id="abv-U3-emB" customClass="SecondViewController" customModule="Project_05___Artistry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q6M-Wk-sJ3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +114,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="462" id="XN2-SL-GSx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorksTableViewCell" rowHeight="462" id="XN2-SL-GSx" customClass="WorksTableViewCell" customModule="Project_05___Artistry" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="462"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XN2-SL-GSx" id="gkW-Tj-WS1">

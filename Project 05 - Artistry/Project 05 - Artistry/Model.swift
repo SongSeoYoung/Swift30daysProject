@@ -7,16 +7,7 @@
 
 import Foundation
 
-struct Artist{
-    var name: String?
-    var bio: String?
-    var image: String?
-    init(_ name: String, _ bio: String, _ image: String){
-        self.name = name
-        self.bio = bio
-        self.image = image
-    }
-}
+
 
 struct Works{
     var title: String?
@@ -27,4 +18,13 @@ struct Works{
         self.image = image
         self.info = info
     }
+}
+
+struct Model: Codable{
+    let artists:[Artist]
+}
+struct Artist: Codable{
+    let name: String?
+    let bio: String?
+    let image: String?
 }
