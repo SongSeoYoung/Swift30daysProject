@@ -36,9 +36,18 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
         self.ArtistryTablleView.reloadData()
-        ArtistryTablleView.rowHeight = UITableView .automaticDimension
-        ArtistryTablleView.estimatedRowHeight = 400
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare")
+        guard let SecondViewcontroller: SecondViewController = segue.destination as? SecondViewController else { return }
+        guard let cell: ArtistryTableViewCell = sender as? ArtistryTableViewCell else { return }
+        let indexPath = ArtistryTablleView.indexPath(for: cell)
+        SecondViewcontroller.artistName = ArtistModel[indexPath?.row ?? 0].name ?? "l"
+        SecondViewcontroller.artistNumber = indexPath?.row
+    }
+
     
 }
 

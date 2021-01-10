@@ -7,17 +7,17 @@
 
 import Foundation
 
+struct WorkModel: Codable{
+    let artists:[WorkData]
+}
+struct WorkData:Codable{
+    var works:[Works]
+}
 
-
-struct Works{
+struct Works: Codable{
     var title: String?
     var image: String?
     var info: String?
-    init(_ title: String, _ image: String, _ info: String){
-        self.title = title
-        self.image = image
-        self.info = info
-    }
 }
 
 struct Model: Codable{

@@ -50,9 +50,6 @@
                                                     <state key="normal" title="Pablo Picasso">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="abv-U3-emB" kind="show" id="LW4-w3-yM0"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -72,6 +69,7 @@
                                             <outlet property="artistBio" destination="d0N-M2-n4C" id="uxw-EC-tHl"/>
                                             <outlet property="artistImg" destination="Kmy-W1-2hk" id="e0f-Hy-ksJ"/>
                                             <outlet property="artistNameBtn" destination="EuJ-gS-emY" id="snX-Yg-0Ba"/>
+                                            <segue destination="abv-U3-emB" kind="show" id="DUf-qX-Z6B"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,7 +100,7 @@
         <!--Second View Controller-->
         <scene sceneID="Xe8-zX-LTS">
             <objects>
-                <viewController id="abv-U3-emB" customClass="SecondViewController" customModule="Project_05___Artistry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="abv-U3-emB" customClass="SecondViewController" customModule="Project_05___Artistry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q6M-Wk-sJ3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,6 +179,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6hE-hA-bse"/>
+                    <connections>
+                        <outlet property="worksTableView" destination="ZGc-jB-URY" id="tCM-68-nbl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPs-sc-QXF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

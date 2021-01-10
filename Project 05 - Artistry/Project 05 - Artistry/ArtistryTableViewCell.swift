@@ -16,6 +16,8 @@ class ArtistryTableViewCell: UITableViewCell {
     @IBOutlet weak var artistImg: UIImageView!
     @IBOutlet weak var artistBio: UITextView!
     @IBOutlet weak var artistNameBtn: UIButton!
+    
+
 //    override class func awakeFromNib() {
 //
 //        contentView.addSubview(artistImg)

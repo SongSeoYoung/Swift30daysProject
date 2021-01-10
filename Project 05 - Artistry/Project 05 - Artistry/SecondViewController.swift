@@ -8,22 +8,52 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    private var works:[Works]=[] {
+        didSet{
+            self.worksTableView.reloadData()
+        }
+    }
+    var artistName: String?
+    var artistNumber: Int?
+    @IBOutlet weak var worksTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(artistNumber)
+        print(artistName)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func getData(){
+        let jsonDecocder: JSONDecoder = JSONDecoder()
+        guard let data: NSDataAsset = NSDataAsset(name: "artists") else {return}
+        do{
+            let artistWorks = try jsonDecocder.decode(WorkModel.self, from: data.data)
+            guard let number = artistNumber else{ return }
+            self.works = artistWorks.artists[number].works
+        } catch {
+            print(error.localizedDescription)
+        }
+        self.worksTableView.reloadData()
     }
-    */
 
+
+}
+
+//MARK:- TableView Delegate, DataSource
+extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return works.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell()
+        return cell
+    }
+    
+    
 }
