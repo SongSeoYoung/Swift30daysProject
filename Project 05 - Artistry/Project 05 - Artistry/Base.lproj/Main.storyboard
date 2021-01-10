@@ -20,18 +20,28 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistryTableViewCell" rowHeight="436" id="CXf-Fa-XlW" customClass="ArtistryTableViewCell" customModule="Project_05___Artistry" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="436"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistryTableViewCell" rowHeight="400" id="CXf-Fa-XlW" customClass="ArtistryTableViewCell" customModule="Project_05___Artistry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CXf-Fa-XlW" id="CgP-NR-dBG">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="436"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kmy-W1-2hk">
-                                                    <rect key="frame" x="10" y="10" width="216" height="381"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kmy-W1-2hk">
+                                                    <rect key="frame" x="10" y="10" width="216" height="310"/>
                                                 </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Pablo Ruiz y Picasso (25 October 1881 – 8 April 1973), also known as Pablo Picasso," textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d0N-M2-n4C">
+                                                    <rect key="frame" x="236" y="10" width="168" height="380"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="168" id="s7s-ws-R7W"/>
+                                                    </constraints>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuJ-gS-emY">
-                                                    <rect key="frame" x="10" y="396" width="216" height="30"/>
+                                                    <rect key="frame" x="10" y="328" width="216" height="30"/>
                                                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="f8q-eh-2bs"/>
@@ -44,37 +54,24 @@
                                                         <segue destination="abv-U3-emB" kind="show" id="LW4-w3-yM0"/>
                                                     </connections>
                                                 </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d0N-M2-n4C">
-                                                    <rect key="frame" x="236" y="10" width="168" height="416"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="168" id="s7s-ws-R7W"/>
-                                                    </constraints>
-                                                    <string key="text">Pablo Ruiz y Picasso (25 October 1881 – 8 April 1973), also known as Pablo Picasso, was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France.</string>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                                </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="d0N-M2-n4C" firstAttribute="leading" secondItem="EuJ-gS-emY" secondAttribute="trailing" constant="10" id="2pB-9F-qZV"/>
+                                                <constraint firstAttribute="bottom" secondItem="d0N-M2-n4C" secondAttribute="bottom" constant="10" id="3wT-K3-lok"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EuJ-gS-emY" secondAttribute="bottom" constant="10" id="6um-mr-T7y"/>
                                                 <constraint firstItem="Kmy-W1-2hk" firstAttribute="top" secondItem="CgP-NR-dBG" secondAttribute="top" constant="10" id="CB5-jl-Grr"/>
                                                 <constraint firstItem="d0N-M2-n4C" firstAttribute="leading" secondItem="Kmy-W1-2hk" secondAttribute="trailing" constant="10" id="Eef-mT-M3S"/>
-                                                <constraint firstItem="EuJ-gS-emY" firstAttribute="bottom" secondItem="d0N-M2-n4C" secondAttribute="bottom" id="NBP-dD-RiO"/>
-                                                <constraint firstItem="d0N-M2-n4C" firstAttribute="top" secondItem="Kmy-W1-2hk" secondAttribute="top" id="Ta1-EL-unp"/>
+                                                <constraint firstItem="EuJ-gS-emY" firstAttribute="leading" secondItem="Kmy-W1-2hk" secondAttribute="leading" id="JOi-PZ-69u"/>
                                                 <constraint firstItem="Kmy-W1-2hk" firstAttribute="leading" secondItem="CgP-NR-dBG" secondAttribute="leading" constant="10" id="VKf-vp-T4j"/>
-                                                <constraint firstItem="EuJ-gS-emY" firstAttribute="top" secondItem="Kmy-W1-2hk" secondAttribute="bottom" constant="5" id="VVH-fz-Db2"/>
-                                                <constraint firstItem="EuJ-gS-emY" firstAttribute="leading" secondItem="Kmy-W1-2hk" secondAttribute="leading" id="adz-v5-ark"/>
-                                                <constraint firstAttribute="bottom" secondItem="EuJ-gS-emY" secondAttribute="bottom" constant="10" id="cX9-fY-98n"/>
+                                                <constraint firstItem="EuJ-gS-emY" firstAttribute="top" secondItem="Kmy-W1-2hk" secondAttribute="bottom" constant="8" id="agz-Op-Izn"/>
                                                 <constraint firstItem="d0N-M2-n4C" firstAttribute="top" secondItem="CgP-NR-dBG" secondAttribute="top" constant="10" id="i29-Gk-zfw"/>
-                                                <constraint firstItem="EuJ-gS-emY" firstAttribute="trailing" secondItem="Kmy-W1-2hk" secondAttribute="trailing" id="lck-2p-MqY"/>
                                                 <constraint firstAttribute="trailing" secondItem="d0N-M2-n4C" secondAttribute="trailing" constant="10" id="qRf-C7-hqy"/>
-                                                <constraint firstAttribute="bottom" secondItem="d0N-M2-n4C" secondAttribute="bottom" constant="10" id="zVD-aI-j6A"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="artistBio" destination="d0N-M2-n4C" id="plM-gg-SW5"/>
-                                            <outlet property="artistImg" destination="Kmy-W1-2hk" id="k0L-DT-9TN"/>
-                                            <outlet property="artistNameBtn" destination="EuJ-gS-emY" id="KKZ-eK-dpi"/>
+                                            <outlet property="artistBio" destination="d0N-M2-n4C" id="uxw-EC-tHl"/>
+                                            <outlet property="artistImg" destination="Kmy-W1-2hk" id="e0f-Hy-ksJ"/>
+                                            <outlet property="artistNameBtn" destination="EuJ-gS-emY" id="snX-Yg-0Ba"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -198,6 +195,10 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.71431394820000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="26"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

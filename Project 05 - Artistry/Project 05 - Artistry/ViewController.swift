@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         settingNavBar()
         fetchData()
+        ArtistryTablleView.rowHeight = UITableView .automaticDimension
+        ArtistryTablleView.estimatedRowHeight = 400
     }
     func settingNavBar(){
         self.title = "Artistry"
@@ -34,6 +36,8 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
         self.ArtistryTablleView.reloadData()
+        ArtistryTablleView.rowHeight = UITableView .automaticDimension
+        ArtistryTablleView.estimatedRowHeight = 400
     }
     
 }
@@ -50,6 +54,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             cell.artistImg.image = UIImage(named: artistImg)
             cell.artistBio.text = artistBio
             cell.artistNameBtn.setTitle(artistName, for: .normal)
+            
         }
         return cell
     }
