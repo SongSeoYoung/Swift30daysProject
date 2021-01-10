@@ -7,6 +7,7 @@
 
 import Foundation
 
+//두 번째 페이지 디코딩용 모델
 struct WorkModel: Codable{
     let artists:[WorkData]
 }
@@ -20,6 +21,8 @@ struct Works: Codable{
     var info: String?
 }
 
+
+//첫 번째 페이지 디코딩용 모델
 struct Model: Codable{
     let artists:[Artist]
 }

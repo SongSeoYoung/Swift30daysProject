@@ -8,16 +8,17 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    private var checking:[Bool] = []        //info 를 보여줘야하는지 체킹하는 bool 값을 담은 배열
+    var artistName: String?
+    var artistNumber: Int?
+    
     private var works:[Works]=[] {
         didSet{
             self.worksTableView.reloadData()
         }
     }
-    private var checking:[Bool] = []
-    var artistName: String?
-    var artistNumber: Int?
-    @IBOutlet weak var worksTableView: UITableView!
-    
+    @IBOutlet private weak var worksTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = artistName
@@ -28,8 +29,8 @@ class SecondViewController: UIViewController {
         getData()
     }
     
-    
-    func getData(){
+    //data fetch
+    private func getData(){
         let jsonDecocder: JSONDecoder = JSONDecoder()
         guard let data: NSDataAsset = NSDataAsset(name: "artists") else {return}
         do{
@@ -41,6 +42,7 @@ class SecondViewController: UIViewController {
         }
         self.worksTableView.reloadData()
         
+        //data 갯수만큼 checking에 default value false 를 넣어줌.
         for _ in 0..<works.count {
             checking.append(false)
         }
@@ -67,11 +69,14 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //checking 값 바꾸기
         checking[indexPath.row] = !checking[indexPath.row]
-
+        //beginUpdates() -> insert, remove, append, selection 등과 같이 Cell or section 에 무언가 바뀜의 시작을 의미
         worksTableView.beginUpdates()
+        //endUpdates() -> 바뀜의 끝을 의미
         worksTableView.endUpdates()
+        worksTableView.reloadData()     //데이터를 다시 불러와야함.
+        //indexPath 에 맞춰서 vertical 하게 스크롤하는
         worksTableView.scrollToRow(at: indexPath, at: .top, animated: true)
-        worksTableView.reloadData()
     }
 }

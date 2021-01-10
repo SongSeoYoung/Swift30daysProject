@@ -15,18 +15,19 @@ class ViewController: UIViewController {
             ArtistryTablleView.reloadData()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingNavBar()
         fetchData()
+        self.title = "Artistry"
+        
+        //동적으로 셀의 높이가 정해지도록.
         ArtistryTablleView.rowHeight = UITableView .automaticDimension
         ArtistryTablleView.estimatedRowHeight = 400
-    }
-    func settingNavBar(){
-        self.title = "Artistry"
+        
     }
     
-    func fetchData(){
+    private func fetchData(){
         let jsonDecoder: JSONDecoder = JSONDecoder()
         guard let data: NSDataAsset = NSDataAsset(name: "artists") else{return}
         do {
@@ -40,7 +41,6 @@ class ViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("prepare")
         guard let SecondViewcontroller: SecondViewController = segue.destination as? SecondViewController else { return }
         guard let cell: ArtistryTableViewCell = sender as? ArtistryTableViewCell else { return }
         let indexPath = ArtistryTablleView.indexPath(for: cell)
@@ -59,6 +59,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ArtistryTableViewCell = ArtistryTablleView.dequeueReusableCell(withIdentifier: "ArtistryTableViewCell", for: indexPath) as? ArtistryTableViewCell else{ return UITableViewCell() }
+        //data 옵셔널헤제
         if let artistImg = ArtistModel[indexPath.row].image, let artistName = ArtistModel[indexPath.row].name, let artistBio = ArtistModel[indexPath.row].bio{
             cell.artistImg.image = UIImage(named: artistImg)
             cell.artistBio.text = artistBio
@@ -68,7 +69,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         cell.selectionStyle = .none
         return cell
     }
-    
-    
 }
 
