@@ -18,12 +18,10 @@
 * **`beginUpdates` & `endUpdates`** - 데이터가 변해서 새로 테이블뷰를 리로드하고싶을 때 보통 `tableView.reloadData` 를 사용해주곤하는데 해당 메서드의 경우 전체 데이터자체를 다시 로드하는 것이므로 비효율적임.   
 이번 프로젝트에서는 셀을 클릭하면 expanded 되어야했기 때문에 새로운 내용의 추가로 height 가 유동적으로 자주 변해야했다. TableView 의 insert, delete, reload, selection 등의 작업을 해당 메서드 사이에 넣으면! 전체를 리로드하지않아도 된다!  
 메서드 사이에 오는 행위에 대한 우선순위? -> delete, reload, insert, select 순서  
-<br>
-그런데 iOS 11 부터는 이를 대신해서 
+그런데 iOS 11 부터는 이를 대신해서 아래의 방법을 사용한다. 하지마 아직 기존 메서드자체가 deprecated 된거 아님
 ```swift
 func performBatchUpdates(_ updates: (() -> Void)?, completion: ((Bool) -> Void)? = nil)
 ```  
- 메서드가 추가됨. 하지만 기존 메서드자체가 deprecated 된건 아니다.
 
 <br>
 
