@@ -65,6 +65,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             cell.artistNameBtn.setTitle(artistName, for: .normal)
             
         }
+        cell.selectionStyle = .none
         return cell
     }
     

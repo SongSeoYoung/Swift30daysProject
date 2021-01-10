@@ -109,11 +109,11 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorksTableViewCell" rowHeight="462" id="XN2-SL-GSx" customClass="WorksTableViewCell" customModule="Project_05___Artistry" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="462"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorksTableViewCell" rowHeight="333" id="XN2-SL-GSx" customClass="WorksTableViewCell" customModule="Project_05___Artistry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="333"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XN2-SL-GSx" id="gkW-Tj-WS1">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="462"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHN-O8-j7d">
@@ -123,44 +123,41 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-oC-jB7">
                                                     <rect key="frame" x="20" y="204" width="374" height="30"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="rBG-7y-9R2"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Guernica">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2GO-9K-qjE">
-                                                    <rect key="frame" x="20" y="244" width="374" height="208"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <string key="text">Guernica is a mural-sized oil painting on canvas by Spanish artist Pablo Picasso completed by June 1937. The painting, which uses a palette of gray, black, and white, is regarded by many art critics as one of the most moving and powerful anti-war paintings in history. Standing at 3.49 metres (11 ft 5 in) tall and 7.76 metres (25 ft 6 in) wide, the large mural shows the suffering of people, animals, and buildings wrenched by violence and chaos.</string>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="show more Info &gt;" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gq2-k3-N9V">
+                                                    <rect key="frame" x="20" y="244" width="374" height="79"/>
                                                     <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show for more Info &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fU7-3R-ZdM">
-                                                    <rect key="frame" x="20" y="244" width="374" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fU7-3R-ZdM" firstAttribute="top" secondItem="hR4-oC-jB7" secondAttribute="bottom" constant="10" id="459-CA-PLl"/>
-                                                <constraint firstAttribute="bottom" secondItem="2GO-9K-qjE" secondAttribute="bottom" constant="10" id="4ar-4d-L38"/>
-                                                <constraint firstItem="fU7-3R-ZdM" firstAttribute="centerX" secondItem="gkW-Tj-WS1" secondAttribute="centerX" id="6ra-ce-uY3"/>
-                                                <constraint firstAttribute="trailing" secondItem="hR4-oC-jB7" secondAttribute="trailing" constant="20" id="IeU-or-Suu"/>
-                                                <constraint firstItem="2GO-9K-qjE" firstAttribute="leading" secondItem="gkW-Tj-WS1" secondAttribute="leading" constant="20" id="N4U-ur-jFi"/>
-                                                <constraint firstItem="fU7-3R-ZdM" firstAttribute="leading" secondItem="gkW-Tj-WS1" secondAttribute="leading" constant="20" id="P4V-nY-VY6"/>
-                                                <constraint firstItem="IHN-O8-j7d" firstAttribute="leading" secondItem="gkW-Tj-WS1" secondAttribute="leading" constant="20" id="PJ1-a7-4pc"/>
-                                                <constraint firstItem="hR4-oC-jB7" firstAttribute="top" secondItem="IHN-O8-j7d" secondAttribute="bottom" constant="10" id="WOZ-3Q-PIt"/>
-                                                <constraint firstItem="hR4-oC-jB7" firstAttribute="leading" secondItem="gkW-Tj-WS1" secondAttribute="leading" constant="20" id="hvY-xo-0Eh"/>
-                                                <constraint firstAttribute="trailing" secondItem="IHN-O8-j7d" secondAttribute="trailing" constant="20" id="jur-bQ-Cpb"/>
-                                                <constraint firstItem="IHN-O8-j7d" firstAttribute="top" secondItem="gkW-Tj-WS1" secondAttribute="top" constant="10" id="nt7-wx-ZP4"/>
-                                                <constraint firstItem="2GO-9K-qjE" firstAttribute="top" secondItem="hR4-oC-jB7" secondAttribute="bottom" constant="10" id="qx5-5N-Joj"/>
-                                                <constraint firstAttribute="trailing" secondItem="2GO-9K-qjE" secondAttribute="trailing" constant="20" id="vRL-02-5PY"/>
-                                                <constraint firstAttribute="trailing" secondItem="fU7-3R-ZdM" secondAttribute="trailing" constant="20" id="wbH-6f-aui"/>
+                                                <constraint firstAttribute="top" secondItem="hR4-oC-jB7" secondAttribute="bottom" constant="-234" id="6jS-Xi-kUD"/>
+                                                <constraint firstItem="hR4-oC-jB7" firstAttribute="leading" secondItem="gkW-Tj-WS1" secondAttribute="leading" constant="20" id="8t1-2I-C0k"/>
+                                                <constraint firstItem="IHN-O8-j7d" firstAttribute="top" secondItem="gkW-Tj-WS1" secondAttribute="top" constant="10" id="9ia-LT-M35"/>
+                                                <constraint firstItem="hR4-oC-jB7" firstAttribute="top" secondItem="IHN-O8-j7d" secondAttribute="bottom" constant="10" id="FDd-GG-uhC"/>
+                                                <constraint firstItem="Gq2-k3-N9V" firstAttribute="top" secondItem="hR4-oC-jB7" secondAttribute="bottom" constant="10" id="LVB-dw-7cd"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gq2-k3-N9V" secondAttribute="bottom" constant="10" id="OvP-8M-lep"/>
+                                                <constraint firstItem="IHN-O8-j7d" firstAttribute="leading" secondItem="gkW-Tj-WS1" secondAttribute="leading" constant="20" id="ZzD-LI-kaV"/>
+                                                <constraint firstAttribute="trailing" secondItem="IHN-O8-j7d" secondAttribute="trailing" constant="20" id="hes-3c-M5X"/>
+                                                <constraint firstAttribute="trailing" secondItem="hR4-oC-jB7" secondAttribute="trailing" constant="20" id="iAG-rh-eKa"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gq2-k3-N9V" secondAttribute="trailing" constant="20" id="tRg-oF-mN4"/>
+                                                <constraint firstItem="Gq2-k3-N9V" firstAttribute="leading" secondItem="gkW-Tj-WS1" secondAttribute="leading" constant="20" id="whD-F4-DcQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ArtNameBtn" destination="hR4-oC-jB7" id="AkX-KM-u3V"/>
+                                            <outlet property="imageBtn" destination="IHN-O8-j7d" id="wn6-Sh-gfy"/>
+                                            <outlet property="textView" destination="Gq2-k3-N9V" id="WG9-LS-tdu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -185,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPs-sc-QXF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="94"/>
+            <point key="canvasLocation" x="1757.9710144927537" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KQ0-2p-79p">
