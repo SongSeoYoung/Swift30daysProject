@@ -44,7 +44,19 @@ https://github.com/soapyigu/Swift-30-Projects 순서대로 진행👩‍💻
 * ### [Project4](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2004%20-%20TodoTDD)
   * **USing UITest, TableView**
 
-  * **Screenshot✨**
+  * **Screenshot✨**  
   <img src="https://user-images.githubusercontent.com/42825223/103529143-7ba88700-4ec8-11eb-82d2-8a8c115147b4.gif" width="200"></img>
 
   * [배운 점 정리]()
+
+  
+<br>
+<br>
+
+* ### [Project5](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2005%20-%20Artistry/Project%2005%20-%20Artistry)
+  * **Using Dynamically TableViewCell, JSONDecoding**
+
+  * **Screenshot✨**  
+  <img src="https://user-images.githubusercontent.com/42825223/104125023-874bf000-5397-11eb-9604-c37f2652780e.gif" width=200></img>
+
+  * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2005%20-%20Artistry)
