@@ -69,12 +69,17 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let cell: WorksTableViewCell = worksTableView.dequeueReusableCell(withIdentifier: "WorksTableViewCell", for: indexPath) as? WorksTableViewCell else { return  }
+        //beginUpdates() -> insert, remove, append, selection 등과 같이 Cell or section 에 무언가 바뀜의 시작을 의미
+//        worksTableView.beginUpdates()
         //checking 값 바꾸기
         checking[indexPath.row] = !checking[indexPath.row]
-        //beginUpdates() -> insert, remove, append, selection 등과 같이 Cell or section 에 무언가 바뀜의 시작을 의미
-        worksTableView.beginUpdates()
+        if let artInfo = works[indexPath.row].info {
+            cell.textView.text = checking[indexPath.row] ? artInfo : "show more data >"
+        }
         //endUpdates() -> 바뀜의 끝을 의미
-        worksTableView.endUpdates()
+//        worksTableView.endUpdates()
         worksTableView.reloadData()     //데이터를 다시 불러와야함.
         //indexPath 에 맞춰서 vertical 하게 스크롤하는
         worksTableView.scrollToRow(at: indexPath, at: .top, animated: true)
