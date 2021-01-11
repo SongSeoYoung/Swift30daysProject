@@ -60,3 +60,15 @@ https://github.com/soapyigu/Swift-30-Projects 순서대로 진행👩‍💻
   <img src="https://user-images.githubusercontent.com/42825223/104125023-874bf000-5397-11eb-9604-c37f2652780e.gif" width=200></img>
 
   * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2005%20-%20Artistry)
+
+
+<br>
+<br>
+
+* ### [Project6](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2006%20-%20CandySearch/Project%2006%20-%20CandySearch)
+  * **Using UISearchController, TableView**  
+
+  * **Screenshot✨**  
+<img src="https://user-images.githubusercontent.com/42825223/104172927-5d063b00-5448-11eb-9203-3468e65ba853.gif" width=200></img>
+
+  * [배운 점 정리]()
