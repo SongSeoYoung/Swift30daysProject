@@ -59,13 +59,13 @@
         <!--Root View Controller-->
         <scene sceneID="piy-bJ-uFr">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="F7w-x9-Z3k" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="F7w-x9-Z3k" customClass="MasterTableView" customModule="Project_07___PokedexGo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="f0d-7Y-hhU">
                         <rect key="frame" x="0.0" y="0.0" width="420" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="3ov-ll-LsH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="3ov-ll-LsH" customClass="MasterTableViewCell" customModule="Project_07___PokedexGo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="420" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ov-ll-LsH" id="WLm-OQ-UAC">
@@ -99,6 +99,11 @@
                                         <constraint firstItem="EUB-UV-KKi" firstAttribute="leading" secondItem="d8V-Cz-XFH" secondAttribute="trailing" constant="30" id="sEj-gr-hPm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="img" destination="EUB-UV-KKi" id="TXe-rF-5ZT"/>
+                                    <outlet property="label" destination="1yq-mo-Aer" id="euO-XI-EDe"/>
+                                    <outlet property="title" destination="d8V-Cz-XFH" id="ClZ-rV-ukl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
