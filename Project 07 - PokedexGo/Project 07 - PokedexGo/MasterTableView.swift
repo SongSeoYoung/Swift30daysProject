@@ -10,11 +10,10 @@ import Kingfisher
 
 class MasterTableView: UITableViewController {
     
-
-    override func viewDidLoad() {
-        <#code#>
-    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pokemons.count
     }
@@ -23,6 +22,10 @@ class MasterTableView: UITableViewController {
         guard let cell: MasterTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MasterTableViewCell else { return UITableViewCell() }
         cell.title.text = pokemons[indexPath.row].name
         cell.label.text = pokemons[indexPath.row].detailInfo
+        guard let pokeImgString = pokemons[indexPath.row].pokeImgUrl else { print(fatalError()) }
+        print(pokeImgString)
+        let url: URL? = URL(string: pokeImgString)
+        cell.img.kf.setImage(with: url, placeholder: UIImage(named: "default_img"))
         return cell
     }
 }
