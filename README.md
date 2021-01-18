@@ -72,3 +72,15 @@ https://github.com/soapyigu/Swift-30-Projects 순서대로 진행👩‍💻
 <img src="https://user-images.githubusercontent.com/42825223/104172927-5d063b00-5448-11eb-9203-3468e65ba853.gif" width=200></img>
 
   * [배운 점 정리]()
+
+<br>
+<br>
+
+* ### [Project7](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2007%20-%20PokedexGo/Project%2007%20-%20PokedexGo)
+  * **Using UISplitView, UITableView, Custom porotocol**  
+
+  * **Screenshot✨**  
+<img src="https://user-images.githubusercontent.com/42825223/104877850-1a8bb380-599e-11eb-8514-2c5b1befe6d8.gif" width=300></img>
+
+  * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2007%20-%20PokedexGo)
+
