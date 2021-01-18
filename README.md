@@ -84,3 +84,14 @@ https://github.com/soapyigu/Swift-30-Projects 순서대로 진행👩‍💻
 
   * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2007%20-%20PokedexGo)
 
+<br>
+<br>
+
+* ### [Project8](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2008%20-%20SimpleRSSReader/Project%2008%20-%20SimpleRSSReader)
+  * **Using UITableView Dynamically Expand Cell, RSSParser with Alamofire**  
+
+  * **Screenshot✨**  
+<img src="https://user-images.githubusercontent.com/42825223/104884633-0baafe00-59aa-11eb-8150-f7387e375344.gif" width=200></img>
+
+  * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2008%20-%20SimpleRSSReader)
+
