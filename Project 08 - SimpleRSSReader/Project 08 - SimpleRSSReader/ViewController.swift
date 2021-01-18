@@ -11,22 +11,27 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-    var data:[Model] = [] {
+    private var data:[Model] = [] {
         didSet{
             self.tableView.reloadData()
+            for _ in 0..<data.count {
+                isClicked.append(false)
+            }
         }
     }
-    let url: String = "http://www.apple.com/main/rss/hotnews/hotnews.rss"
-    @IBOutlet weak var tableView: UITableView!
+    private let url: String = "http://www.apple.com/main/rss/hotnews/hotnews.rss"
+    private var isClicked: [Bool] = []
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        print("parser")
+        RSSParser()
+    }
+    func RSSParser(){
         AF.request(url).responseRSS() { (response) -> Void in
             if let feed: RSSFeed = response.value {
-                /// Do something with your new RSSFeed object!
                 for item in feed.items {
                     if let title = item.title,
                        let date = item.pubDate,
@@ -39,6 +44,7 @@ class ViewController: UIViewController {
     }
 
 }
+//MARK:- tableView extension
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -50,12 +56,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.newLabel.text = data[indexPath.row].itemDescription
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY/mm/dd HH:mm:ss"
+        
         if let date = data[indexPath.row].pubDate {
             let dateString: String = dateFormatter.string(from: date)
             cell.dateTimeLabel.text = dateString
         }
+        //cell expand
+        if isClicked[indexPath.row] {
+            cell.newLabel.numberOfLines = 0
+        }
+        else{
+            cell.newLabel.numberOfLines = 4
+        }
+        
+        cell.selectionStyle = .none
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //changing the cell clicked bool value
+        isClicked[indexPath.row] = !isClicked[indexPath.row]
+        //scroll event
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+    }
 
 }
