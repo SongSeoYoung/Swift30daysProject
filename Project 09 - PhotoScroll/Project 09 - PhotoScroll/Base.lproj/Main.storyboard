@@ -136,29 +136,44 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xhi-KQ-Pqw">
                                 <rect key="frame" x="20" y="428" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="XSL-Sv-ife"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nIR-yW-lF7">
+                                <rect key="frame" x="145.5" y="844" width="123" height="28"/>
+                                <color key="pageIndicatorTintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="pageControl:" destination="3n5-vd-fn7" eventType="valueChanged" id="Tfg-Sf-rkn"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qJr-dE-X14"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qJr-dE-X14" firstAttribute="bottom" secondItem="Xhi-KQ-Pqw" secondAttribute="bottom" constant="400" id="0jD-cv-eUK"/>
+                            <constraint firstItem="nIR-yW-lF7" firstAttribute="centerX" secondItem="V7U-oG-mK8" secondAttribute="centerX" id="DA0-au-X5u"/>
                             <constraint firstItem="qJr-dE-X14" firstAttribute="trailing" secondItem="Xhi-KQ-Pqw" secondAttribute="trailing" constant="20" id="P7U-7R-lXe"/>
                             <constraint firstItem="elK-3J-tKe" firstAttribute="centerX" secondItem="V7U-oG-mK8" secondAttribute="centerX" id="Vpn-Kt-awv"/>
                             <constraint firstItem="elK-3J-tKe" firstAttribute="top" secondItem="zHp-9l-cy6" secondAttribute="bottom" constant="30" id="Wgp-56-uLm"/>
                             <constraint firstItem="zHp-9l-cy6" firstAttribute="trailing" secondItem="qJr-dE-X14" secondAttribute="trailing" id="ilC-gF-Xy8"/>
                             <constraint firstItem="Xhi-KQ-Pqw" firstAttribute="top" secondItem="elK-3J-tKe" secondAttribute="bottom" constant="15" id="jF0-Op-ARL"/>
                             <constraint firstItem="zHp-9l-cy6" firstAttribute="top" secondItem="qJr-dE-X14" secondAttribute="top" id="nlZ-9E-Ds3"/>
+                            <constraint firstItem="nIR-yW-lF7" firstAttribute="bottom" secondItem="qJr-dE-X14" secondAttribute="bottom" constant="10" id="pfO-7t-ST1"/>
                             <constraint firstItem="Xhi-KQ-Pqw" firstAttribute="leading" secondItem="qJr-dE-X14" secondAttribute="leading" constant="20" id="x0k-u4-dCu"/>
                             <constraint firstItem="zHp-9l-cy6" firstAttribute="leading" secondItem="V7U-oG-mK8" secondAttribute="leading" id="yhZ-da-ye0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="PhotoImage" destination="zHp-9l-cy6" id="Fot-Ir-agP"/>
+                        <outlet property="pageControl" destination="nIR-yW-lF7" id="4TM-hv-c8W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEp-mV-Vzx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3n5-vd-fn7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3538" y="102"/>
         </scene>
@@ -184,6 +199,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

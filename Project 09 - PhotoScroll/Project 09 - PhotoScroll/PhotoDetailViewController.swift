@@ -9,15 +9,16 @@ import UIKit
 
 class PhotoDetailViewController: UIViewController {
 
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var PhotoImage: UIImageView!
     let PhotoList: Photo = Photo()
     var number: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let indexNumber = self.number {
-            print(indexNumber, "detail index")
-            self.PhotoImage.image = PhotoList.photoList[indexNumber]
-        }
+        guard let indexNumber = self.number else {return }
+        self.PhotoImage.image = PhotoList.photoList[indexNumber]
+        pageControl.numberOfPages = PhotoList.photoList.count
+        pageControl.currentPage = indexNumber
         
     }
     
