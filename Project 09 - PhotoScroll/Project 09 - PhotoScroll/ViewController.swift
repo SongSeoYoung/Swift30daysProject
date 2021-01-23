@@ -10,13 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var PhotoCollectionView: UICollectionView!
-    let photoList: [UIImage?] = [
-        UIImage(named: "photo1"),
-        UIImage(named: "photo2"),
-        UIImage(named: "photo3"),
-        UIImage(named: "photo4"),
-        UIImage(named: "photo5")
-    ]
+    let photoModel: Photo = Photo.init()
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
@@ -36,19 +30,20 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let containerVc: ContainerViewController = self.storyboard?.instantiateViewController(identifier: "ContainerViewController") as? ContainerViewController else {return }
+        containerVc.number = indexPath.row
         self.navigationController?.pushViewController(containerVc, animated: true)
     }
 }
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(photoList.count)
-        return photoList.count
+        print(photoModel.photoList.count)
+        return photoModel.photoList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: PhotoCollectionViewCell = PhotoCollectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as? PhotoCollectionViewCell else {return UICollectionViewCell() }
-        cell.cellPhoto.image = photoList[indexPath.row]
+        cell.cellPhoto.image = photoModel.photoList[indexPath.row]
         return cell
     }
     

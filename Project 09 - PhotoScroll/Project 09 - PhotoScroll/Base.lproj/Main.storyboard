@@ -109,7 +109,7 @@
         <!--Page View Controller-->
         <scene sceneID="oo4-3E-knE">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="cDP-X6-4Ge" customClass="PageViewController" customModule="Project_09___PhotoScroll" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="cDP-X6-4Ge" customClass="PageViewController" customModule="Project_09___PhotoScroll" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmi-Zm-8F6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2752" y="88"/>
@@ -127,6 +127,9 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats name fits my best?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elK-3J-tKe">
                                 <rect key="frame" x="108.5" y="392" width="197" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JMM-Ir-5Rc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -151,6 +154,9 @@
                             <constraint firstItem="zHp-9l-cy6" firstAttribute="leading" secondItem="V7U-oG-mK8" secondAttribute="leading" id="yhZ-da-ye0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PhotoImage" destination="zHp-9l-cy6" id="Fot-Ir-agP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEp-mV-Vzx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

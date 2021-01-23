@@ -10,13 +10,16 @@ import UIKit
 class ContainerViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
+    var number: Int?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        (segue.destination as? PageViewController)?.number = 0
+        (segue.destination as? PageViewController)?.number = self.number
     }
 
 }
