@@ -28,11 +28,11 @@ class ViewController: UIViewController {
 
 }
 extension ViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let containerVc: ContainerViewController = self.storyboard?.instantiateViewController(identifier: "ContainerViewController") as? ContainerViewController else {return }
-        containerVc.number = indexPath.row
-        self.navigationController?.pushViewController(containerVc, animated: true)
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        guard let containerVc: ContainerViewController = self.storyboard?.instantiateViewController(identifier: "ContainerViewController") as? ContainerViewController else {return }
+//        containerVc.number = indexPath.row
+//        self.navigationController?.pushViewController(containerVc, animated: true)
+//    }
 }
 
 extension ViewController: UICollectionViewDataSource {

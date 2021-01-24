@@ -51,6 +51,7 @@
                                         <size key="customSize" width="171" height="184"/>
                                         <connections>
                                             <outlet property="cellPhoto" destination="VF0-O8-Uv4" id="7T4-OF-5MV"/>
+                                            <segue destination="xy4-au-ggG" kind="show" id="8Ud-So-aLC"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -73,6 +74,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="88.392857142857139"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="ArW-hF-rtf">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="xy4-au-ggG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hHh-Tt-jlw"/>
+                    <connections>
+                        <segue destination="316-4t-JWU" kind="show" id="UN1-w1-8fT"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t69-0e-cBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1701" y="88"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OQe-02-WtI">
+            <objects>
+                <viewController id="316-4t-JWU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1nH-11-9Qt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAV-Ml-oyj">
+                                <rect key="frame" x="20" y="192" width="374" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="photo4"/>
+                                <connections>
+                                    <segue destination="Hgg-Vc-WyR" kind="show" id="yfZ-jd-R3A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RxM-VT-hVU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M2W-xo-k5r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6D-TJ-eI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2418.840579710145" y="87.723214285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ce0-tQ-ngw">
+            <objects>
+                <viewController id="Hgg-Vc-WyR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xSU-L0-btA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="zzzz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wff-eH-Uyo">
+                                <rect key="frame" x="78" y="339" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KI9-h6-7I0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n4a-O2-gyH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bd8-XM-K6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3120" y="88"/>
         </scene>
         <!--Container View Controller-->
         <scene sceneID="yC8-zT-Og0">
@@ -104,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGp-RQ-s6C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815.9420289855075" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1090" y="851"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="oo4-3E-knE">
@@ -112,7 +177,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="cDP-X6-4Ge" customClass="PageViewController" customModule="Project_09___PhotoScroll" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmi-Zm-8F6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2752" y="88"/>
+            <point key="canvasLocation" x="2026" y="851"/>
         </scene>
         <!--Photo Detail View Controller-->
         <scene sceneID="0db-M1-yiH">
@@ -181,7 +246,7 @@
                 <exit id="3n5-vd-fn7" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="rH1-2u-Pfu"/>
             </objects>
-            <point key="canvasLocation" x="3714" y="88"/>
+            <point key="canvasLocation" x="2987" y="851"/>
         </scene>
         <!--Pinch Photo View Controller-->
         <scene sceneID="0M8-IA-zuh">
@@ -220,7 +285,7 @@
                     </connections>
                 </pinchGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4349" y="88"/>
+            <point key="canvasLocation" x="3623" y="851"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ehb-Fn-3IB">
@@ -242,6 +307,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photo4" width="1024" height="768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
