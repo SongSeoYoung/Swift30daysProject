@@ -181,7 +181,7 @@
                 <exit id="3n5-vd-fn7" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="rH1-2u-Pfu"/>
             </objects>
-            <point key="canvasLocation" x="3713.04347826087" y="87.723214285714278"/>
+            <point key="canvasLocation" x="3509" y="88"/>
         </scene>
         <!--Pinch Photo View Controller-->
         <scene sceneID="0M8-IA-zuh">

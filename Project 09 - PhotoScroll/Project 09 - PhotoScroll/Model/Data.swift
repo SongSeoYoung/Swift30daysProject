@@ -7,6 +7,7 @@
 
 import UIKit
 
+//photo Data
 struct Photo {
     
     var photoList: [UIImage?] = [

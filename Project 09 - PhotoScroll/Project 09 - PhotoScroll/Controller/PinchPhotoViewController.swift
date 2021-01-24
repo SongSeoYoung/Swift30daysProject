@@ -7,17 +7,22 @@
 
 import UIKit
 
-class PinchPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
+class PinchPhotoViewController: UIViewController{
 
-    @IBOutlet weak var pinchPhoto: UIImageView!
-    let photoList: Photo = Photo()
-    @IBOutlet var pinchGesture: UIPinchGestureRecognizer!
+    @IBOutlet private weak var pinchPhoto: UIImageView!
+    @IBOutlet private var pinchGesture: UIPinchGestureRecognizer!
+    private let photoList: Photo = Photo()
     var number: Int?
-    var firstHeight: CGFloat?
-    var firstWidth: CGFloat?
+    private var firstHeight: CGFloat?
+    private var firstWidth: CGFloat?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("pinch")
+        setImage()
+    }
+    
+    // index number 받아와서 이미지세팅
+    private func setImage() {
         if let indexNumber = self.number {
             print(indexNumber)
             pinchPhoto.image = photoList.photoList[indexNumber]
@@ -28,17 +33,15 @@ class PinchPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
         firstWidth = self.pinchPhoto.frame.width
     }
     
-    
-    
 
     @IBAction func pinchAction(_ sender: Any) {
+        //pinch 된 이미지 크기
         let newWidth = pinchGesture.scale * self.pinchPhoto.frame.width
         let newHeight = pinchGesture.scale * self.pinchPhoto.frame.height
         
-        print(newWidth, newHeight)
-        
         guard let originWidth = self.firstWidth,
               let originHeight = self.firstHeight else { return }
+        //최소사이즈 설정
         if (newWidth < originWidth) && (newHeight < originHeight) {
             print("minumum")
             pinchPhoto.frame.size = CGSize(width: originWidth, height: originHeight)
