@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotoDetailViewController: UIViewController {
+class PhotoDetailViewController: UIViewController, UIGestureRecognizerDelegate{
 
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var PhotoImage: UIImageView!
@@ -19,8 +19,10 @@ class PhotoDetailViewController: UIViewController {
         self.PhotoImage.image = PhotoList.photoList[indexNumber]
         pageControl.numberOfPages = PhotoList.photoList.count
         pageControl.currentPage = indexNumber
-        
-    }
-    
 
+
+    }
+
+
+    
 }

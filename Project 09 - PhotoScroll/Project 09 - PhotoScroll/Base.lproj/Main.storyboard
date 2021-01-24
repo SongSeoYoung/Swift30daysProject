@@ -124,6 +124,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zHp-9l-cy6">
                                 <rect key="frame" x="0.0" y="44" width="414" height="318"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rH1-2u-Pfu" appends="YES" id="atE-qF-Iut"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats name fits my best?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elK-3J-tKe">
                                 <rect key="frame" x="108.5" y="392" width="197" height="21"/>
@@ -167,6 +171,7 @@
                             <constraint firstItem="zHp-9l-cy6" firstAttribute="leading" secondItem="V7U-oG-mK8" secondAttribute="leading" id="yhZ-da-ye0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ztW-hM-B4E"/>
                     <connections>
                         <outlet property="PhotoImage" destination="zHp-9l-cy6" id="Fot-Ir-agP"/>
                         <outlet property="pageControl" destination="nIR-yW-lF7" id="4TM-hv-c8W"/>
@@ -174,8 +179,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEp-mV-Vzx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3n5-vd-fn7" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="rH1-2u-Pfu"/>
             </objects>
-            <point key="canvasLocation" x="3538" y="102"/>
+            <point key="canvasLocation" x="3714" y="88"/>
+        </scene>
+        <!--Pinch Photo View Controller-->
+        <scene sceneID="0M8-IA-zuh">
+            <objects>
+                <viewController storyboardIdentifier="PinchPhotoViewController" id="Hwf-wg-8HX" customClass="PinchPhotoViewController" customModule="Project_09___PhotoScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6my-LC-Rgd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FZu-QL-88m">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UuF-iQ-UGA" appends="YES" id="eHz-yz-Aab"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MaV-OE-p8j"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FZu-QL-88m" firstAttribute="leading" secondItem="MaV-OE-p8j" secondAttribute="leading" id="K2u-4I-YpQ"/>
+                            <constraint firstItem="FZu-QL-88m" firstAttribute="trailing" secondItem="MaV-OE-p8j" secondAttribute="trailing" id="O0k-Jf-9yX"/>
+                            <constraint firstItem="FZu-QL-88m" firstAttribute="top" secondItem="6my-LC-Rgd" secondAttribute="top" id="ZuQ-0N-vDY"/>
+                            <constraint firstAttribute="bottom" secondItem="FZu-QL-88m" secondAttribute="bottom" id="rdg-LJ-Ne9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pinchGesture" destination="UuF-iQ-UGA" id="iL9-Pf-vkq"/>
+                        <outlet property="pinchPhoto" destination="FZu-QL-88m" id="ZPt-y1-2Hy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ib-uL-8Px" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="UuF-iQ-UGA">
+                    <connections>
+                        <action selector="pinchAction:" destination="Hwf-wg-8HX" id="okp-jE-am5"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4349" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ehb-Fn-3IB">
