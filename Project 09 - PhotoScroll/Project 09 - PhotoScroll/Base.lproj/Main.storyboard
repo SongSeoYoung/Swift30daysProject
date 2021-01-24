@@ -122,13 +122,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zHp-9l-cy6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="318"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="rH1-2u-Pfu" appends="YES" id="atE-qF-Iut"/>
-                                </connections>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats name fits my best?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elK-3J-tKe">
                                 <rect key="frame" x="108.5" y="392" width="197" height="21"/>
                                 <constraints>
@@ -154,45 +147,52 @@
                                     <action selector="pageControl:" destination="3n5-vd-fn7" eventType="valueChanged" id="Tfg-Sf-rkn"/>
                                 </connections>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMj-H5-wCf">
+                                <rect key="frame" x="10" y="44" width="394" height="328"/>
+                                <state key="normal" title="Button" image="photo2"/>
+                                <connections>
+                                    <segue destination="Hwf-wg-8HX" kind="show" id="kLl-jT-tzp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qJr-dE-X14"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qJr-dE-X14" firstAttribute="bottom" secondItem="Xhi-KQ-Pqw" secondAttribute="bottom" constant="400" id="0jD-cv-eUK"/>
+                            <constraint firstItem="elK-3J-tKe" firstAttribute="top" secondItem="bMj-H5-wCf" secondAttribute="bottom" constant="20" id="3hp-aA-NGO"/>
                             <constraint firstItem="nIR-yW-lF7" firstAttribute="centerX" secondItem="V7U-oG-mK8" secondAttribute="centerX" id="DA0-au-X5u"/>
+                            <constraint firstItem="bMj-H5-wCf" firstAttribute="top" secondItem="qJr-dE-X14" secondAttribute="top" id="Ew2-bs-Gcz"/>
                             <constraint firstItem="qJr-dE-X14" firstAttribute="trailing" secondItem="Xhi-KQ-Pqw" secondAttribute="trailing" constant="20" id="P7U-7R-lXe"/>
+                            <constraint firstItem="bMj-H5-wCf" firstAttribute="leading" secondItem="qJr-dE-X14" secondAttribute="leading" constant="10" id="UPW-KB-PYy"/>
                             <constraint firstItem="elK-3J-tKe" firstAttribute="centerX" secondItem="V7U-oG-mK8" secondAttribute="centerX" id="Vpn-Kt-awv"/>
-                            <constraint firstItem="elK-3J-tKe" firstAttribute="top" secondItem="zHp-9l-cy6" secondAttribute="bottom" constant="30" id="Wgp-56-uLm"/>
-                            <constraint firstItem="zHp-9l-cy6" firstAttribute="trailing" secondItem="qJr-dE-X14" secondAttribute="trailing" id="ilC-gF-Xy8"/>
                             <constraint firstItem="Xhi-KQ-Pqw" firstAttribute="top" secondItem="elK-3J-tKe" secondAttribute="bottom" constant="15" id="jF0-Op-ARL"/>
-                            <constraint firstItem="zHp-9l-cy6" firstAttribute="top" secondItem="qJr-dE-X14" secondAttribute="top" id="nlZ-9E-Ds3"/>
                             <constraint firstItem="nIR-yW-lF7" firstAttribute="bottom" secondItem="qJr-dE-X14" secondAttribute="bottom" constant="10" id="pfO-7t-ST1"/>
+                            <constraint firstAttribute="trailing" secondItem="bMj-H5-wCf" secondAttribute="trailing" constant="10" id="vBk-co-3XE"/>
                             <constraint firstItem="Xhi-KQ-Pqw" firstAttribute="leading" secondItem="qJr-dE-X14" secondAttribute="leading" constant="20" id="x0k-u4-dCu"/>
-                            <constraint firstItem="zHp-9l-cy6" firstAttribute="leading" secondItem="V7U-oG-mK8" secondAttribute="leading" id="yhZ-da-ye0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ztW-hM-B4E"/>
                     <connections>
-                        <outlet property="PhotoImage" destination="zHp-9l-cy6" id="Fot-Ir-agP"/>
                         <outlet property="pageControl" destination="nIR-yW-lF7" id="4TM-hv-c8W"/>
+                        <outlet property="photoImage" destination="bMj-H5-wCf" id="Pzj-7F-O9S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEp-mV-Vzx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3n5-vd-fn7" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="rH1-2u-Pfu"/>
             </objects>
-            <point key="canvasLocation" x="3714" y="88"/>
+            <point key="canvasLocation" x="3713.04347826087" y="87.723214285714278"/>
         </scene>
         <!--Pinch Photo View Controller-->
         <scene sceneID="0M8-IA-zuh">
             <objects>
                 <viewController storyboardIdentifier="PinchPhotoViewController" id="Hwf-wg-8HX" customClass="PinchPhotoViewController" customModule="Project_09___PhotoScroll" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6my-LC-Rgd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FZu-QL-88m">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="UuF-iQ-UGA" appends="YES" id="eHz-yz-Aab"/>
@@ -208,6 +208,7 @@
                             <constraint firstAttribute="bottom" secondItem="FZu-QL-88m" secondAttribute="bottom" id="rdg-LJ-Ne9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WCW-2W-SBU"/>
                     <connections>
                         <outlet property="pinchGesture" destination="UuF-iQ-UGA" id="iL9-Pf-vkq"/>
                         <outlet property="pinchPhoto" destination="FZu-QL-88m" id="ZPt-y1-2Hy"/>
@@ -242,6 +243,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photo2" width="1024" height="768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
