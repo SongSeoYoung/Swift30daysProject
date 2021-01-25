@@ -28,10 +28,17 @@
     }
  ```
 <br>
-실패다.    
+
+이 것도 가능하다.  
+
 <br>  
 
+처음에는 안되는 줄 알았는데 이 부분이 궁금해서 동아리에서 물어보니! 스토리보드에서 segue로 연결해준 경우에는 바로 ```prepare``` 메서드에서 작성해줄 수 있고, 만약 그런게 아니라면 ```didSelectRowAt``` ```delegate``` 메서드 안에서 따로 지정해서 ```navigation push``` 해주면 된다.!  
 
-이렇게 전달하면 다음 ViewController 로 push 되는건 되지만, vc.cellImage = self.itemNumber 이런 식으로 다음 뷰를 객체로 생성해서 프로퍼티에 값을 넘겨주는 부분이 문제인 것이다.  
+**만약 우리가 스토리보드에서도 ```segue```로 연결했는데 ```didSelectRowAt``` 에서 푸시하는 방식으로 코드를 작성해준다면, ```didSelectRowAt``` -> ```prepare``` 순으로 코드가 진행된다고한다.**  
 
-DetailViewController 에 가서 확인해보면 전달해준 값을 받지 못하고 nil 을 출력하는 것을 볼 수 있었다.
+<br>
+
+그럼 언제 어떤 메서드에서 이를 구현해야하는가?? 에 대해서도 궁금했는데, ```cell``` 의 ```indexPath``` 와 같은 정보를 넘겨줘야하는 경우는 아무래도 ```delegate method``` 안에 구현되어있는 ```didSelectRowAt``` 을 이용하면, 파라미터로 받는 ```indexPath``` 값을 따로 인스턴스화시켜서 사용하지 않아도되는 편리함이 있어서 셀에 대한 정보는 ```didSelectRowAt``` 에서 데이터를 넘기는 듯 하다. 
+
+하지만 우리가 현재 보고있는 페이지에 대한 정보를 넘겨야하는 경우에는 아무래도 ```tableView``` 에 대한 내용이 아니라 전체적인 내용이다보니 ```navigation``` 을 위한 ```prepare method``` 를 ```override``` 해서 사용하는 것 같다. 👍 새로운 배움 👍

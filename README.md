@@ -105,4 +105,4 @@ https://github.com/soapyigu/Swift-30-Projects 순서대로 진행👩‍💻
   * **Screenshot✨**  
 <img src="https://user-images.githubusercontent.com/42825223/105627438-592bdd00-5e7a-11eb-9e78-964fc6554bc8.gif" width=200></img>
 
-  * [배운 점 정리](hhttps://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2009%20-%20PhotoScroll)
+  * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2009%20-%20PhotoScroll)
