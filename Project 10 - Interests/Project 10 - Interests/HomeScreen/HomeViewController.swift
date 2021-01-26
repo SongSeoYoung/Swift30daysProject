@@ -9,15 +9,27 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var userImg: UIImageView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     //dummy data 가져오기
     private var interest = Interest.createInterests()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        makeCircleUserImg()
+    }
+    func makeCircleUserImg() {
+        userImg.layer.cornerRadius = userImg.frame.height/2
+        userImg.layer.borderWidth = 1
+        userImg.layer.borderColor = UIColor.clear.cgColor
+        userImg.clipsToBounds = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let cell: InterestCollectionViewCell = sender as? InterestCollectionViewCell else {return}
+        let indexPath = collectionView.indexPath(for: cell)
+        (segue.destination as? DetailViewController)?.indexNumber = indexPath?.row
+    }
 
 }
 
