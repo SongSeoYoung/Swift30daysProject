@@ -15,19 +15,13 @@ class HomeViewController: UIViewController {
     private var interest = Interest.createInterests()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        makeFlowLayout()
-        // Do any additional setup after loading the view.
+
     }
     
-    func makeFlowLayout() {
-        let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: 500, height: 600)
-        flowLayout.minimumInteritemSpacing = 50
-        flowLayout.minimumLineSpacing = 30
-        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    }
 
 }
+
+//MARK:- extension UICollectionView DataSource, Delegate
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
