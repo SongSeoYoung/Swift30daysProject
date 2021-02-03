@@ -73,12 +73,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xub-2S-VWY">
                                 <rect key="frame" x="172.5" y="694" width="69" height="118"/>
                                 <state key="normal" title="Animation"/>
+                                <connections>
+                                    <action selector="tapBtn:" destination="t3H-Uw-OG8" eventType="touchUpInside" id="Ev2-o4-ddC"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NoV-mx-DcP">
-                                <rect key="frame" x="100" y="260" width="214" height="214"/>
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="NoV-mx-DcP" secondAttribute="height" multiplier="1:1" id="Lrc-hJ-AAM"/>
+                                    <constraint firstAttribute="height" constant="200" id="Kgu-Ss-OVA"/>
+                                    <constraint firstAttribute="width" constant="200" id="mBW-A9-mvO"/>
+                                    <constraint firstAttribute="width" secondItem="NoV-mx-DcP" secondAttribute="height" multiplier="1:1" id="mQN-BH-Yiv"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -87,9 +92,8 @@
                         <constraints>
                             <constraint firstItem="Xub-2S-VWY" firstAttribute="top" secondItem="Yhs-Zq-GtL" secondAttribute="top" constant="650" id="Dxu-5H-Kdh"/>
                             <constraint firstItem="Yhs-Zq-GtL" firstAttribute="bottom" secondItem="Xub-2S-VWY" secondAttribute="bottom" constant="50" id="Hhg-kt-mh9"/>
-                            <constraint firstItem="NoV-mx-DcP" firstAttribute="leading" secondItem="Yhs-Zq-GtL" secondAttribute="leading" constant="100" id="Ztn-AN-Dcx"/>
-                            <constraint firstItem="Xub-2S-VWY" firstAttribute="top" secondItem="NoV-mx-DcP" secondAttribute="bottom" constant="220" id="m3f-8Y-eXX"/>
-                            <constraint firstItem="Yhs-Zq-GtL" firstAttribute="trailing" secondItem="NoV-mx-DcP" secondAttribute="trailing" constant="100" id="pNi-ui-aZL"/>
+                            <constraint firstItem="NoV-mx-DcP" firstAttribute="centerX" secondItem="KoV-sV-LjF" secondAttribute="centerX" id="fue-T8-JzV"/>
+                            <constraint firstItem="NoV-mx-DcP" firstAttribute="centerY" secondItem="KoV-sV-LjF" secondAttribute="centerY" id="woE-cS-Ai6"/>
                             <constraint firstItem="Xub-2S-VWY" firstAttribute="centerX" secondItem="KoV-sV-LjF" secondAttribute="centerX" id="ypt-vp-wHc"/>
                         </constraints>
                     </view>
