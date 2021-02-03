@@ -14,25 +14,31 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var redView: UIView!
     @IBOutlet weak var topConstraints: NSLayoutConstraint!
-    
+    @IBOutlet weak var trailingConstraints: NSLayoutConstraint!
+    @IBOutlet weak var bottomConstraints: NSLayoutConstraint!
+    @IBOutlet weak var leadingConstraints: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.title = self.rowTitle
     }
     
     func setSizeAndColor(_ color: UIColor, _ size: CGFloat){
-        UIView.animate(withDuration: 4,
+        UIView.animate(withDuration: 1,
                        delay: 0,
                        options: [.curveEaseInOut],
                        animations: {[weak self] in
                         self?.redView.backgroundColor = color
-                        self?.redView.frame.size = CGSize(width: (self?.redView.bounds.width)! * size, height: (self?.redView.bounds.height)! * size)
-                        print((self?.redView.bounds.width))
-                        print((self?.redView.bounds.height))
+                        self?.redView.transform = CGAffineTransform(scaleX: size, y: size)
                        },
                        completion: {[weak self]_ in
-                        self?.redView.backgroundColor = .green
-                        self?.redView.frame.size = CGSize(width: (self?.redView.bounds.width)! * 2, height: (self?.redView.bounds.height)! * 2)
+                        UIView.animate(withDuration: 1,
+                                       delay: 0,
+                                       options: [.curveEaseInOut],
+                                       animations: {[weak self] in
+                                        self?.redView.backgroundColor = .green
+                                        self?.redView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+                                       },
+                                       completion: nil)
                        })
     }
     
@@ -80,31 +86,26 @@ class DetailViewController: UIViewController {
                            })
             
         case "Color and Frame Change":
-            print((self.redView.frame.width))
-            print((self.redView.frame.height))
-            UIView.animate(withDuration: 4,
+            UIView.animate(withDuration: 1,
                            delay: 0,
-//                           options: nil,
+                           options: [.curveEaseInOut],
                            animations: {[weak self] in
                             self?.redView.backgroundColor = .orange
-                            self?.redView.frame.size =
-                                CGSize(width: (self?.redView.bounds.width)! * 1.25,
-                                       height: (self?.redView.bounds.height)! * 1.25)
-                            print((self?.redView.bounds.width))
-                            print((self?.redView.bounds.height))
+                            self?.redView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
                            },
                            completion: { [weak self]_ in
-                            self?.setSizeAndColor(.yellow, 0.75)
+                            self?.setSizeAndColor(.yellow, 0.9)
                            })
-            print((self.redView.frame.width))
-            print((self.redView.frame.height))
+
         case "Pop":
-            print(self.redView.bounds.height)
-            self.redView.frame.size = CGSize(width: (self.redView.bounds.width) * 1.25, height: (self.redView.bounds.height) * 1.25)
-            print(self.redView.bounds.height)
-            UIView.animate(withDuration: 2, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
-                self?.loadViewIfNeeded()
-            }, completion: nil)
+            UIView.animate(withDuration: 2,
+                           delay: 0,
+                           options: [.curveEaseInOut],
+                           animations: { [weak self] in
+                            self?.redView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+                           },
+                           completion: nil)
+            
         default:
             UIView.transition(with: self.redView, duration: 3, options: [.transitionCrossDissolve], animations: {self.redView.backgroundColor = .green}, completion: nil)
         }

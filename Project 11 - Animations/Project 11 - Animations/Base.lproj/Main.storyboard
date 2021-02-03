@@ -78,29 +78,33 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NoV-mx-DcP">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <rect key="frame" x="107" y="298" width="200" height="200"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Kgu-Ss-OVA"/>
-                                    <constraint firstAttribute="width" constant="200" id="mBW-A9-mvO"/>
-                                    <constraint firstAttribute="width" secondItem="NoV-mx-DcP" secondAttribute="height" multiplier="1:1" id="mQN-BH-Yiv"/>
+                                    <constraint firstAttribute="width" secondItem="NoV-mx-DcP" secondAttribute="height" multiplier="1:1" id="rjd-Ye-hoy"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yhs-Zq-GtL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="NoV-mx-DcP" firstAttribute="leading" secondItem="Yhs-Zq-GtL" secondAttribute="leading" constant="107" id="CTH-A3-KjT"/>
+                            <constraint firstItem="Yhs-Zq-GtL" firstAttribute="trailing" secondItem="NoV-mx-DcP" secondAttribute="trailing" constant="107" id="DEC-Fd-qHx"/>
                             <constraint firstItem="Xub-2S-VWY" firstAttribute="top" secondItem="Yhs-Zq-GtL" secondAttribute="top" constant="650" id="Dxu-5H-Kdh"/>
                             <constraint firstItem="Yhs-Zq-GtL" firstAttribute="bottom" secondItem="Xub-2S-VWY" secondAttribute="bottom" constant="50" id="Hhg-kt-mh9"/>
-                            <constraint firstItem="NoV-mx-DcP" firstAttribute="centerX" secondItem="KoV-sV-LjF" secondAttribute="centerX" id="fue-T8-JzV"/>
-                            <constraint firstItem="NoV-mx-DcP" firstAttribute="centerY" secondItem="KoV-sV-LjF" secondAttribute="centerY" id="woE-cS-Ai6"/>
+                            <constraint firstItem="NoV-mx-DcP" firstAttribute="top" secondItem="Yhs-Zq-GtL" secondAttribute="top" constant="254" id="rGP-LM-OZC"/>
+                            <constraint firstItem="Xub-2S-VWY" firstAttribute="top" secondItem="NoV-mx-DcP" secondAttribute="bottom" constant="196" id="wO6-P1-7ss"/>
                             <constraint firstItem="Xub-2S-VWY" firstAttribute="centerX" secondItem="KoV-sV-LjF" secondAttribute="centerX" id="ypt-vp-wHc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zGM-a2-UeN"/>
                     <connections>
+                        <outlet property="bottomConstraints" destination="wO6-P1-7ss" id="OlM-JS-jBa"/>
                         <outlet property="button" destination="Xub-2S-VWY" id="RJU-dC-ehZ"/>
+                        <outlet property="leadingConstraints" destination="CTH-A3-KjT" id="oh4-G2-m9h"/>
                         <outlet property="redView" destination="NoV-mx-DcP" id="OrF-Ox-iKV"/>
+                        <outlet property="topConstraints" destination="rGP-LM-OZC" id="jjl-Wo-FFN"/>
+                        <outlet property="trailingConstraints" destination="DEC-Fd-qHx" id="t4V-eh-Ug2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1RP-Ka-3Ae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
