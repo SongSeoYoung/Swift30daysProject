@@ -136,6 +136,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpr-e9-wOb">
                                 <rect key="frame" x="172.5" y="694" width="69" height="118"/>
                                 <state key="normal" title="Animation"/>
+                                <connections>
+                                    <action selector="TappedBtn:" destination="wE3-Tx-Raz" eventType="touchUpInside" id="cv1-Ax-uvw"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp" translatesAutoresizingMaskIntoConstraints="NO" id="jMD-ya-vf0">
                                 <rect key="frame" x="100" y="260" width="214" height="214"/>
