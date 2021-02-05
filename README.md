@@ -118,3 +118,15 @@ https://github.com/soapyigu/Swift-30-Projects 순서대로 진행👩‍💻
 <img src="https://user-images.githubusercontent.com/42825223/105860354-d13c0380-6030-11eb-9a33-d7b44c434aef.gif" width=200></img>
 
   * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2010%20-%20Interests)
+
+
+<br>
+<br>
+
+* ### [Project12](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2010%20-%20Interests/Project%2010%20-%20Interests)
+  * **Using UICollectionView, UIScrollView**  
+
+  * **Screenshot✨**  
+<img src="https://user-images.githubusercontent.com/42825223/105860354-d13c0380-6030-11eb-9a33-d7b44c434aef.gif" width=200></img>
+
+  * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2010%20-%20Interests)

@@ -17,8 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-8d-LuW">
-                                <rect key="frame" x="173" y="747" width="68" height="99"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-8d-LuW">
+                                <rect key="frame" x="173" y="824" width="68" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="i0e-8o-n4U"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
@@ -244,19 +247,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="npS-7n-xdC"/>
                     <connections>
-                        <outlet property="AudioStack" destination="um5-dC-3VO" id="rTf-Yh-zZo"/>
                         <outlet property="auidoTrailing" destination="9iS-lY-Yk1" id="VYb-OJ-sLE"/>
                         <outlet property="chatLeading" destination="vmZ-42-ctS" id="iha-Q5-ws6"/>
-                        <outlet property="chatStack" destination="LJf-1Z-fYa" id="jwP-IY-sCJ"/>
-                        <outlet property="linkStack" destination="zwz-Wm-buq" id="kKr-lG-scj"/>
                         <outlet property="linkTrailing" destination="ZNp-z4-JJP" id="LDf-Jx-G8G"/>
-                        <outlet property="photoStack" destination="V8p-yg-0dI" id="sDZ-Jh-lqj"/>
                         <outlet property="photoTrailing" destination="fWP-0C-LrF" id="u6t-vV-O1e"/>
                         <outlet property="quoteLeading" destination="Ptj-Wq-UbH" id="fwp-wo-5jQ"/>
-                        <outlet property="quoteStack" destination="Heo-hw-CrK" id="JKF-YX-OWg"/>
-                        <outlet property="superView" destination="j9E-Ca-pAy" id="NYG-g1-X7F"/>
                         <outlet property="textLeading" destination="w8b-0b-BPA" id="BlN-OI-86E"/>
-                        <outlet property="textStack" destination="ZeD-xH-R7U" id="qdc-6e-yJk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUt-0X-8fD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
