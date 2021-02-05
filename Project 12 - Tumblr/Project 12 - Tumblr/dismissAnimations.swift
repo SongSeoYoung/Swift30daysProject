@@ -19,6 +19,8 @@ class DismissAni: NSObject, UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
+        let screens : (from:UIViewController, to:UIViewController) = (transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)!, transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)!)
+        let menuViewController = screens.from as! AnimationViewController 
         guard let fromView = transitionContext.view(forKey: .from) else {return}
         //MARK: animation
         UIView.animate(
@@ -34,6 +36,32 @@ class DismissAni: NSObject, UIViewControllerAnimatedTransitioning {
             transitionContext.completeTransition(true)
           }
         )
+        
+        menuViewController.photoTrailing.constant = -200
+        menuViewController.textLeading.constant = -200
+        
+        
+        UIView.animate(withDuration: duration, delay: 0.2, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [.curveEaseInOut], animations: {
+            fromView.layoutIfNeeded()
+        }, completion: {_ in
+            transitionContext.completeTransition(true)
+        })
+        
+        menuViewController.quoteLeading.constant = -200
+        menuViewController.auidoTrailing.constant = -200
+        UIView.animate(withDuration: duration, delay: 0.2, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [.curveEaseInOut], animations: {
+            fromView.layoutIfNeeded()
+        }, completion: {_ in
+            transitionContext.completeTransition(true)
+        })
+        
+        menuViewController.chatLeading.constant = -200
+        menuViewController.linkTrailing.constant = -200
+        UIView.animate(withDuration: duration, delay: 0.2, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.5, options: [.curveEaseInOut], animations: {
+            fromView.layoutIfNeeded()
+        }, completion: {_ in
+            transitionContext.completeTransition(true)
+        })
     }
     
     

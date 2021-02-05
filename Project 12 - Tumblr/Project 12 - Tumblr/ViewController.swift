@@ -10,10 +10,14 @@ import UIKit
 class ViewController: UIViewController{
     //animator 객체생성
     let transition = animations()
-    let dismissTransition = DismissAni()
+//    let dismissTransition = DismissAni()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
     }
 
     @IBAction func plusTapped(_ sender: Any) {
@@ -32,7 +36,7 @@ extension ViewController: UIViewControllerTransitioningDelegate {
     //언제 어떤 애니메이션으로 화면전환을 할건지에 대한 정보를 담고있음.
     // 여기 파라미터를 이용해서 정의하는데, 여기서는 일단 단일 애니메이션이여서 하나만 return  해주낟
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-
+        transition.presenting = true
       return transition
     }
     
@@ -40,7 +44,7 @@ extension ViewController: UIViewControllerTransitioningDelegate {
     //You check which view controller was dismissed and decide whether to return nil and use the default animation or to return a custom transition animator and use that instead.
     func animationController(forDismissed dismissed: UIViewController)
         -> UIViewControllerAnimatedTransitioning? {
-      
-      return dismissTransition
+        transition.presenting = false
+      return transition
     }
 }
