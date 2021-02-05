@@ -9,8 +9,14 @@ import UIKit
 
 class AnimationViewController: UIViewController {
 
+    @IBOutlet var superView: UIView!
+    @IBOutlet weak var linkStack: UIStackView!
+    @IBOutlet weak var chatStack: UIStackView!
+    @IBOutlet weak var photoStack: UIStackView!
+    @IBOutlet weak var textStack: UIStackView!
     @IBOutlet weak var AudioStack: UIStackView!
     @IBOutlet weak var quoteStack: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,5 +27,9 @@ class AnimationViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         print("dismiss")
     }
+    
+}
+
+extension AnimationViewController: UIViewControllerTransitioningDelegate {
     
 }

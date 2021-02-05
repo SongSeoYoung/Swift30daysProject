@@ -251,7 +251,12 @@
                     <navigationItem key="navigationItem" id="npS-7n-xdC"/>
                     <connections>
                         <outlet property="AudioStack" destination="um5-dC-3VO" id="rTf-Yh-zZo"/>
+                        <outlet property="chatStack" destination="LJf-1Z-fYa" id="jwP-IY-sCJ"/>
+                        <outlet property="linkStack" destination="zwz-Wm-buq" id="kKr-lG-scj"/>
+                        <outlet property="photoStack" destination="V8p-yg-0dI" id="sDZ-Jh-lqj"/>
                         <outlet property="quoteStack" destination="Heo-hw-CrK" id="JKF-YX-OWg"/>
+                        <outlet property="superView" destination="j9E-Ca-pAy" id="NYG-g1-X7F"/>
+                        <outlet property="textStack" destination="ZeD-xH-R7U" id="qdc-6e-yJk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUt-0X-8fD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
