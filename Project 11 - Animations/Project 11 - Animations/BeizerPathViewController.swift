@@ -9,22 +9,25 @@ import UIKit
 
 class BeizerPathViewController: UIViewController {
 
+    @IBOutlet weak var redView: UIView!
     @IBOutlet weak var button: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUI()
+        setCircleView()
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setCircleView() {
+        self.redView.layer.cornerRadius = self.redView.frame.height / 2
+        self.redView.clipsToBounds = false
+        
     }
-    */
+    func setUI() {
+        let path: UIBezierPath = UIBezierPath()
+        path.move(to: CGPoint(x: 30, y: 30))
+        path.addLine(to: CGPoint(x: 30, y: 100))
+        path.stroke()
+        
+    }
 
 }

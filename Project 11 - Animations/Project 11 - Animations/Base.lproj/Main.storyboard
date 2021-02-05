@@ -184,11 +184,22 @@
                                 <rect key="frame" x="172.5" y="694" width="69" height="118"/>
                                 <state key="normal" title="Animation"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvH-Go-wdM">
+                                <rect key="frame" x="60" y="194" width="63" height="63"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="5q4-EC-G0R"/>
+                                    <constraint firstAttribute="width" secondItem="nvH-Go-wdM" secondAttribute="height" multiplier="1:1" id="GG7-ma-AnC"/>
+                                    <constraint firstAttribute="width" constant="63" id="iVq-3n-ec9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="If9-ps-ikc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="nvH-Go-wdM" firstAttribute="leading" secondItem="If9-ps-ikc" secondAttribute="leading" constant="60" id="MRS-yh-Dnk"/>
                             <constraint firstItem="If9-ps-ikc" firstAttribute="bottom" secondItem="Uub-f9-PCB" secondAttribute="bottom" constant="50" id="ROt-QU-FaB"/>
+                            <constraint firstItem="nvH-Go-wdM" firstAttribute="top" secondItem="If9-ps-ikc" secondAttribute="top" constant="150" id="ReM-JF-W3a"/>
                             <constraint firstItem="Uub-f9-PCB" firstAttribute="centerX" secondItem="mN2-aN-YD0" secondAttribute="centerX" id="ayc-yA-4Li"/>
                             <constraint firstItem="Uub-f9-PCB" firstAttribute="top" secondItem="If9-ps-ikc" secondAttribute="top" constant="650" id="kfE-iA-KI0"/>
                         </constraints>
@@ -196,11 +207,12 @@
                     <navigationItem key="navigationItem" id="YrL-V3-enZ"/>
                     <connections>
                         <outlet property="button" destination="Uub-f9-PCB" id="6Wh-ZC-TZ6"/>
+                        <outlet property="redView" destination="nvH-Go-wdM" id="BWw-ge-dCY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjW-Jk-rSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2328" y="84"/>
+            <point key="canvasLocation" x="2327.536231884058" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
