@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController{
     //animator 객체생성
     let transition = animations()
-    
+    let dismissTransition = DismissAni()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,7 +18,7 @@ class ViewController: UIViewController{
 
     @IBAction func plusTapped(_ sender: Any) {
         guard let aniVc: AnimationViewController = self.storyboard?.instantiateViewController(identifier: "AnimationViewController") as? AnimationViewController else {return}
-        aniVc.modalPresentationStyle = .fullScreen
+        aniVc.modalPresentationStyle = .custom
         //segue 하기 전에 트렌지션 델리게이트를 지정한다. 그래서 이제 UIKit 는 Home ViewController 에게 segue 전에 항상 묻는 것. 그런데 여기서 우리는 delegate 를 self 로 지정했기 때문에 항상 사용자지정 애니메이션으로 넘어간다고 이해함.
         aniVc.transitioningDelegate = self
         self.present(aniVc, animated: true, completion: nil)
@@ -41,6 +41,6 @@ extension ViewController: UIViewControllerTransitioningDelegate {
     func animationController(forDismissed dismissed: UIViewController)
         -> UIViewControllerAnimatedTransitioning? {
       
-      return nil
+      return dismissTransition
     }
 }
