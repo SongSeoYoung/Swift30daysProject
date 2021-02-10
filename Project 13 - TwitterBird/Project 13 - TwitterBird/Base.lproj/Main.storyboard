@@ -15,24 +15,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterScreen" translatesAutoresizingMaskIntoConstraints="NO" id="VjV-iI-CJ4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="VjV-iI-CJ4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9qb-vh-OnI"/>
-                            <constraint firstItem="VjV-iI-CJ4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BOi-8H-dXw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VjV-iI-CJ4" secondAttribute="trailing" id="Is0-TR-RFE"/>
-                            <constraint firstAttribute="bottom" secondItem="VjV-iI-CJ4" secondAttribute="bottom" id="M73-bI-54S"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="backgroundImg" destination="VjV-iI-CJ4" id="jcc-NQ-CeN"/>
-                        <outlet property="rootView" destination="8bC-Xf-vdC" id="xsP-DM-Mxo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,7 +25,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="twitterScreen" width="621" height="1344"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
