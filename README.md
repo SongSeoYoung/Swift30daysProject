@@ -134,3 +134,14 @@ https://github.com/soapyigu/Swift-30-Projects
 <img src="https://user-images.githubusercontent.com/42825223/107041960-7b234900-6804-11eb-9f51-142f962a7745.gif" width=200></img>
 
   * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2012%20-%20Tumblr)
+
+  <br>
+<br>
+
+* ### [Project13](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2013%20-%20TwitterBird/Project%2013%20-%20TwitterBird)
+  * **Using CALayer, CAKeyframeAnimation**  
+
+  * **Screenshot✨**  
+<img src="https://user-images.githubusercontent.com/42825223/107531715-7396e200-6c00-11eb-97ad-cc9cea0b5a63.gif" width=200></img>
+
+  * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2013%20-%20TwitterBird)
