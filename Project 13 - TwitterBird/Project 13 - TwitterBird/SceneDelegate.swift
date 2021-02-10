@@ -12,14 +12,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, CAAnimationDelegate {
     var window: UIWindow?
     var twittermask: CALayer?
     var imageView: UIImageView?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let _ = (scene as? UIWindowScene) else { return }
         
         if let window = window {
-            print("window is window")
-            
-            
+           
             let image: UIImage = UIImage(named: "twitterScreen")!
             imageView = UIImageView(frame: window.frame)
             imageView!.image = image
@@ -35,48 +34,54 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, CAAnimationDelegate {
             
             imageView!.layer.mask = twittermask
             
-                        animateMask()
-           
-            //윈도우를 만들어주는 메서드
-            //            This is a convenience method to show the current window and position it in front of all other windows at the same level or lower.
-            //            window.makeKeyAndVisible()
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//                UIView.animate(withDuration: 5,
-//                               delay: 0,
-//                               options: .curveEaseInOut,
-//                               animations: { [weak self] in
-//                                self?.twittermask!.bounds = CGRect(x: 0, y: 0, width: 80, height: 80)
-//                               },
-//                               completion: {[weak self]_ in
-//                                self?.twittermask!.bounds = CGRect(x: 0, y: 0, width: 3000, height: 3000)
-//                                self?.imageView?.mask = nil
-//                               })
-//            }
+            animateMask()
+            
+            //여러개의 애니메이션을 연결해야하는 경우에,, keyframeAnimation 을 사용하면 편하겠지?
+            
+            //            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            //                UIView.animate(withDuration: 5,
+            //                               delay: 0,
+            //                               options: .curveEaseInOut,
+            //                               animations: { [weak self] in
+            //                                self?.twittermask!.bounds = CGRect(x: 0, y: 0, width: 80, height: 80)
+            //                               },
+            //                               completion: {[weak self]_ in
+            //                                self?.twittermask!.bounds = CGRect(x: 0, y: 0, width: 3000, height: 3000)
+            //                                self?.imageView?.mask = nil
+            //                               })
+            //            }
             
             window.rootViewController = UIViewController()
             window.backgroundColor = UIColor(red: 70/255, green: 154/255, blue: 233/255, alpha: 1)
-
+            
         }
         
     }
+    
+    // MARK: - making with keyFrameAnimation
+    
     func animateMask() {
-        // init key frame animation
+        
+        //객체만들기
         let keyFrameAnimation = CAKeyframeAnimation(keyPath: "bounds")
         keyFrameAnimation.delegate = self
-        keyFrameAnimation.duration = 1.3
-        keyFrameAnimation.beginTime = CACurrentMediaTime() + 0.5
+        keyFrameAnimation.duration = 1.3        //전체 Duration
+        keyFrameAnimation.beginTime = CACurrentMediaTime() + 0.5        //시작타임
         
-        // animate zoom in and then zoom out
+        // 애니메이션이 될 프로퍼티들 속성 값 변경
         let initalBounds = twittermask!.bounds
         let secondBounds = CGRect(x: 0, y: 0, width: 80, height: 64)
         let finalBounds = CGRect(x: 0, y: 0, width: 3000, height: 3000)
+        // 애니메이션에 적용시킬 프로퍼티들에 대한 집합 -> 애니메이션에 더해줌
         keyFrameAnimation.values = [initalBounds,secondBounds, finalBounds]
         
-        // set up time interals
+        // 각 애니메이션의 duration
         keyFrameAnimation.keyTimes = [0,0.3, 1]
         
-        // add animation to current view
+        // 애니메이션 실행 옵션? 타이밍 처리 해주기
+        //이니셜라이저 (name: ) 을 사용하면 이미 정해진 것들을 이용해서 표현할 수 있다.
         keyFrameAnimation.timingFunctions = [CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut), CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)]
+        //애니메이션 더해주기
         twittermask!.add(keyFrameAnimation, forKey: "bounds")
     }
     
