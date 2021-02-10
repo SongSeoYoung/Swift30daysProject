@@ -35,25 +35,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, CAAnimationDelegate {
             
             imageView!.layer.mask = twittermask
             
-            //            animateMask()
-            
-            window.rootViewController = UIViewController()
-            window.backgroundColor = .blue
+                        animateMask()
+           
             //윈도우를 만들어주는 메서드
             //            This is a convenience method to show the current window and position it in front of all other windows at the same level or lower.
             //            window.makeKeyAndVisible()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                UIView.animate(withDuration: 5,
-                               delay: 0,
-                               options: .curveEaseInOut,
-                               animations: { [weak self] in
-                                self?.twittermask!.bounds = CGRect(x: 0, y: 0, width: 80, height: 80)
-                               },
-                               completion: {[weak self]_ in
-                                self?.twittermask!.bounds = CGRect(x: 0, y: 0, width: 3000, height: 3000)
-                                self?.imageView?.mask = nil
-                               })
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                UIView.animate(withDuration: 5,
+//                               delay: 0,
+//                               options: .curveEaseInOut,
+//                               animations: { [weak self] in
+//                                self?.twittermask!.bounds = CGRect(x: 0, y: 0, width: 80, height: 80)
+//                               },
+//                               completion: {[weak self]_ in
+//                                self?.twittermask!.bounds = CGRect(x: 0, y: 0, width: 3000, height: 3000)
+//                                self?.imageView?.mask = nil
+//                               })
+//            }
+            
+            window.rootViewController = UIViewController()
+            window.backgroundColor = UIColor(red: 70/255, green: 154/255, blue: 233/255, alpha: 1)
 
         }
         
@@ -62,17 +63,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, CAAnimationDelegate {
         // init key frame animation
         let keyFrameAnimation = CAKeyframeAnimation(keyPath: "bounds")
         keyFrameAnimation.delegate = self
-        keyFrameAnimation.duration = 1
-        keyFrameAnimation.beginTime = CACurrentMediaTime() + 1
+        keyFrameAnimation.duration = 1.3
+        keyFrameAnimation.beginTime = CACurrentMediaTime() + 0.5
         
         // animate zoom in and then zoom out
-        let initalBounds = NSValue(cgRect: twittermask!.bounds)
-        let secondBounds = NSValue(cgRect: CGRect(x: 0, y: 0, width: 80, height: 64))
-        let finalBounds = NSValue(cgRect: CGRect(x: 0, y: 0, width: 2000, height: 2000))
-        keyFrameAnimation.values = [initalBounds, secondBounds, finalBounds]
+        let initalBounds = twittermask!.bounds
+        let secondBounds = CGRect(x: 0, y: 0, width: 80, height: 64)
+        let finalBounds = CGRect(x: 0, y: 0, width: 3000, height: 3000)
+        keyFrameAnimation.values = [initalBounds,secondBounds, finalBounds]
         
         // set up time interals
-        keyFrameAnimation.keyTimes = [0, 0.3, 1]
+        keyFrameAnimation.keyTimes = [0,0.3, 1]
         
         // add animation to current view
         keyFrameAnimation.timingFunctions = [CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut), CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)]
