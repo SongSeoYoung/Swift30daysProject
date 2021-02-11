@@ -19,36 +19,50 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gak-7W-mp4">
                                 <rect key="frame" x="80" y="232" width="254" height="128"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="XWV-co-vXm">
-                                <rect key="frame" x="124" y="366" width="54" height="19"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-ip-asN">
-                                <rect key="frame" x="252" y="366" width="54" height="19"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="xKD-m1-M3n">
-                                <rect key="frame" x="188" y="366" width="54" height="19"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ql1-Eq-YYX">
+                                <rect key="frame" x="159.5" y="375" width="95" height="5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="XWV-co-vXm">
+                                        <rect key="frame" x="0.0" y="0.0" width="5" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="2ug-fg-zvx"/>
+                                            <constraint firstAttribute="width" constant="5" id="EXZ-JC-Yte"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="xKD-m1-M3n">
+                                        <rect key="frame" x="45" y="0.0" width="5" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="Kmr-3E-9lY"/>
+                                            <constraint firstAttribute="width" constant="5" id="VTI-at-UUh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-ip-asN">
+                                        <rect key="frame" x="90" y="0.0" width="5" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="5" id="RNl-XJ-dL7"/>
+                                            <constraint firstAttribute="height" constant="5" id="wbY-Db-Fqq"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XWV-co-vXm" secondAttribute="bottom" constant="477" id="2Ww-5J-Ub3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AJF-ip-asN" secondAttribute="bottom" constant="477" id="3Ml-Uh-qsS"/>
+                            <constraint firstItem="ql1-Eq-YYX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5D6-1N-xGd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gak-7W-mp4" secondAttribute="trailing" constant="80" id="8yN-tQ-5Cy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xKD-m1-M3n" secondAttribute="bottom" constant="477" id="BzW-vj-etZ"/>
-                            <constraint firstItem="xKD-m1-M3n" firstAttribute="leading" secondItem="XWV-co-vXm" secondAttribute="trailing" constant="10" id="Mnd-g1-9bN"/>
-                            <constraint firstItem="XWV-co-vXm" firstAttribute="top" secondItem="Gak-7W-mp4" secondAttribute="bottom" constant="6" id="OcF-ow-xZO"/>
-                            <constraint firstItem="AJF-ip-asN" firstAttribute="top" secondItem="Gak-7W-mp4" secondAttribute="bottom" constant="6" id="Y5j-Fh-MYn"/>
+                            <constraint firstItem="ql1-Eq-YYX" firstAttribute="top" secondItem="Gak-7W-mp4" secondAttribute="bottom" constant="15" id="XFk-xA-4LM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gak-7W-mp4" secondAttribute="bottom" constant="502" id="YQT-N7-8LA"/>
-                            <constraint firstItem="XWV-co-vXm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="jmG-eC-R3y"/>
                             <constraint firstItem="Gak-7W-mp4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="kfz-eA-Jg9"/>
                             <constraint firstItem="Gak-7W-mp4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nrh-uK-unZ"/>
                             <constraint firstItem="Gak-7W-mp4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="188" id="qlq-gz-QDe"/>
-                            <constraint firstItem="xKD-m1-M3n" firstAttribute="top" secondItem="Gak-7W-mp4" secondAttribute="bottom" constant="6" id="qyX-ky-rAg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AJF-ip-asN" secondAttribute="trailing" constant="108" id="yYj-vG-zE8"/>
-                            <constraint firstItem="AJF-ip-asN" firstAttribute="leading" secondItem="xKD-m1-M3n" secondAttribute="trailing" constant="10" id="zC1-eq-LVB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dot1" destination="XWV-co-vXm" id="IEw-Bb-ImD"/>
+                        <outlet property="dot2" destination="xKD-m1-M3n" id="EWb-xZ-QR7"/>
+                        <outlet property="dot3" destination="AJF-ip-asN" id="bOv-hU-Xjf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
