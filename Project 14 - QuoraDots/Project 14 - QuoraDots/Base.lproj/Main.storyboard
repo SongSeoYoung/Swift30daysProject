@@ -20,27 +20,27 @@
                                 <rect key="frame" x="80" y="232" width="254" height="128"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ql1-Eq-YYX">
-                                <rect key="frame" x="159.5" y="375" width="95" height="5"/>
+                                <rect key="frame" x="165.5" y="395" width="83" height="1"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="XWV-co-vXm">
-                                        <rect key="frame" x="0.0" y="0.0" width="5" height="5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1" height="1"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="5" id="2ug-fg-zvx"/>
-                                            <constraint firstAttribute="width" constant="5" id="EXZ-JC-Yte"/>
+                                            <constraint firstAttribute="height" constant="1" id="2ug-fg-zvx"/>
+                                            <constraint firstAttribute="width" constant="1" id="EXZ-JC-Yte"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="xKD-m1-M3n">
-                                        <rect key="frame" x="45" y="0.0" width="5" height="5"/>
+                                        <rect key="frame" x="41" y="0.0" width="1" height="1"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="5" id="Kmr-3E-9lY"/>
-                                            <constraint firstAttribute="width" constant="5" id="VTI-at-UUh"/>
+                                            <constraint firstAttribute="height" constant="1" id="Kmr-3E-9lY"/>
+                                            <constraint firstAttribute="width" constant="1" id="VTI-at-UUh"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-ip-asN">
-                                        <rect key="frame" x="90" y="0.0" width="5" height="5"/>
+                                        <rect key="frame" x="82" y="0.0" width="1" height="1"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="5" id="RNl-XJ-dL7"/>
-                                            <constraint firstAttribute="height" constant="5" id="wbY-Db-Fqq"/>
+                                            <constraint firstAttribute="width" constant="1" id="RNl-XJ-dL7"/>
+                                            <constraint firstAttribute="height" constant="1" id="wbY-Db-Fqq"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -51,7 +51,7 @@
                         <constraints>
                             <constraint firstItem="ql1-Eq-YYX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5D6-1N-xGd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gak-7W-mp4" secondAttribute="trailing" constant="80" id="8yN-tQ-5Cy"/>
-                            <constraint firstItem="ql1-Eq-YYX" firstAttribute="top" secondItem="Gak-7W-mp4" secondAttribute="bottom" constant="15" id="XFk-xA-4LM"/>
+                            <constraint firstItem="ql1-Eq-YYX" firstAttribute="top" secondItem="Gak-7W-mp4" secondAttribute="bottom" constant="35" id="XFk-xA-4LM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gak-7W-mp4" secondAttribute="bottom" constant="502" id="YQT-N7-8LA"/>
                             <constraint firstItem="Gak-7W-mp4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="kfz-eA-Jg9"/>
                             <constraint firstItem="Gak-7W-mp4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nrh-uK-unZ"/>
