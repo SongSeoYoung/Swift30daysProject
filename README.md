@@ -145,3 +145,14 @@ https://github.com/soapyigu/Swift-30-Projects
 <img src="https://user-images.githubusercontent.com/42825223/107531715-7396e200-6c00-11eb-97ad-cc9cea0b5a63.gif" width=200></img>
 
   * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2013%20-%20TwitterBird)
+
+    <br>
+<br>
+
+* ### [Project14](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2014%20-%20QuoraDots/Project%2014%20-%20QuoraDots)
+  * **Using CGAffineTransition, animateKeyframes**  
+
+  * **Screenshot✨**  
+<img src="https://user-images.githubusercontent.com/42825223/107612380-78ec3f00-6c89-11eb-9da9-543b6db1a4be.gif" width=200></img>
+
+  * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2014%20-%20QuoraDots)
