@@ -1,24 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_15___SnapchatMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5j-d5-dAs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vht-uL-udd">
+                                        <rect key="frame" x="0.0" y="0.0" width="1656" height="896"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="Dna-fD-VCN">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snap" translatesAutoresizingMaskIntoConstraints="NO" id="8YG-Gg-diO">
+                                                <rect key="frame" x="414" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stories" translatesAutoresizingMaskIntoConstraints="NO" id="xjc-qi-2ca">
+                                                <rect key="frame" x="828" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discover" translatesAutoresizingMaskIntoConstraints="NO" id="b6p-Wx-38f">
+                                                <rect key="frame" x="1242" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="b6p-Wx-38f" firstAttribute="top" secondItem="vht-uL-udd" secondAttribute="top" id="0dV-v5-oQp"/>
+                                            <constraint firstAttribute="bottom" secondItem="b6p-Wx-38f" secondAttribute="bottom" id="2RE-ac-oZz"/>
+                                            <constraint firstItem="b6p-Wx-38f" firstAttribute="width" secondItem="Dna-fD-VCN" secondAttribute="width" id="Aau-Db-XME"/>
+                                            <constraint firstAttribute="bottom" secondItem="xjc-qi-2ca" secondAttribute="bottom" id="CN9-QO-B2n"/>
+                                            <constraint firstItem="8YG-Gg-diO" firstAttribute="leading" secondItem="Dna-fD-VCN" secondAttribute="trailing" id="Cyv-7j-9TR"/>
+                                            <constraint firstItem="8YG-Gg-diO" firstAttribute="top" secondItem="vht-uL-udd" secondAttribute="top" id="Ddu-FB-ym3"/>
+                                            <constraint firstItem="8YG-Gg-diO" firstAttribute="width" secondItem="Dna-fD-VCN" secondAttribute="width" id="GCQ-tw-MoT"/>
+                                            <constraint firstItem="xjc-qi-2ca" firstAttribute="top" secondItem="vht-uL-udd" secondAttribute="top" id="GXw-8S-MHV"/>
+                                            <constraint firstItem="xjc-qi-2ca" firstAttribute="leading" secondItem="8YG-Gg-diO" secondAttribute="trailing" id="JSm-r4-1oF"/>
+                                            <constraint firstAttribute="trailing" secondItem="b6p-Wx-38f" secondAttribute="trailing" id="MPC-Hp-iXA"/>
+                                            <constraint firstItem="xjc-qi-2ca" firstAttribute="width" secondItem="8YG-Gg-diO" secondAttribute="width" id="MpO-if-x9z"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dna-fD-VCN" secondAttribute="bottom" id="N21-dR-S2K"/>
+                                            <constraint firstItem="Dna-fD-VCN" firstAttribute="leading" secondItem="vht-uL-udd" secondAttribute="leading" id="YEY-uV-Xjb"/>
+                                            <constraint firstItem="b6p-Wx-38f" firstAttribute="leading" secondItem="xjc-qi-2ca" secondAttribute="trailing" id="ahB-Zv-yhO"/>
+                                            <constraint firstItem="Dna-fD-VCN" firstAttribute="top" secondItem="vht-uL-udd" secondAttribute="top" id="xw7-lv-hys"/>
+                                            <constraint firstAttribute="bottom" secondItem="8YG-Gg-diO" secondAttribute="bottom" id="zwt-ro-kfj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vht-uL-udd" firstAttribute="trailing" secondItem="B6o-Mt-JoU" secondAttribute="trailing" id="9Mz-zU-ZfF"/>
+                                    <constraint firstItem="vht-uL-udd" firstAttribute="top" secondItem="B6o-Mt-JoU" secondAttribute="top" id="FoN-ey-0wA"/>
+                                    <constraint firstItem="vht-uL-udd" firstAttribute="bottom" secondItem="B6o-Mt-JoU" secondAttribute="bottom" id="Hsk-Ch-vhE"/>
+                                    <constraint firstItem="vht-uL-udd" firstAttribute="leading" secondItem="B6o-Mt-JoU" secondAttribute="leading" id="LDS-3u-NIm"/>
+                                    <constraint firstItem="vht-uL-udd" firstAttribute="height" secondItem="jcM-Sr-TaR" secondAttribute="height" id="q1G-uM-cVQ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="B6o-Mt-JoU"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="jcM-Sr-TaR"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p5j-d5-dAs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0hq-Kb-WzC"/>
+                            <constraint firstAttribute="bottom" secondItem="p5j-d5-dAs" secondAttribute="bottom" id="1g1-My-DkF"/>
+                            <constraint firstItem="p5j-d5-dAs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Kw-N2-JrT"/>
+                            <constraint firstItem="Dna-fD-VCN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Zly-xb-oBU"/>
+                            <constraint firstItem="p5j-d5-dAs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zV0-7D-bNN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Chat" width="320" height="568"/>
+        <image name="Discover" width="375" height="667"/>
+        <image name="Snap" width="375" height="667"/>
+        <image name="Stories" width="375" height="667"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
