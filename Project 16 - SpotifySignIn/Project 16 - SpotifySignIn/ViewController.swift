@@ -10,11 +10,14 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-
+    @IBOutlet weak var logInBtn: UIButton!
+    @IBOutlet weak var signUpBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setVideoPlay()
     }
+    
     func setVideoPlay() {
         guard let path = Bundle.main.path(forResource: "moments", ofType: "mp4") else { return }
         let player = AVPlayer(url: URL(fileURLWithPath: path))
