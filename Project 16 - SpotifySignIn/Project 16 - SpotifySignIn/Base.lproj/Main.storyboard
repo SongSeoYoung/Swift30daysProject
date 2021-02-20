@@ -17,56 +17,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPh-75-bGP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-secondary-logo" translatesAutoresizingMaskIntoConstraints="NO" id="u2v-8a-orQ">
-                                        <rect key="frame" x="98" y="180" width="218" height="66"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlq-Ws-Ofh">
-                                        <rect key="frame" x="0.0" y="846" width="414" height="50"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vG1-Gr-xnx">
-                                                <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                                <state key="normal" title="Log In">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mop-pQ-IbM">
-                                                <rect key="frame" x="360" y="0.0" width="54" height="50"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                <state key="normal" title="Sign Up">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ZOE-Rw-p07"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="-6" width="414" height="902"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <constraints>
-                                    <constraint firstItem="u2v-8a-orQ" firstAttribute="centerX" secondItem="dPh-75-bGP" secondAttribute="centerX" id="F1t-EB-0fV"/>
-                                    <constraint firstAttribute="bottom" secondItem="Tlq-Ws-Ofh" secondAttribute="bottom" id="TE8-Lo-nlm"/>
-                                    <constraint firstItem="Tlq-Ws-Ofh" firstAttribute="leading" secondItem="dPh-75-bGP" secondAttribute="leading" id="XAI-bD-thE"/>
-                                    <constraint firstItem="Tlq-Ws-Ofh" firstAttribute="top" secondItem="u2v-8a-orQ" secondAttribute="bottom" constant="600" id="bHK-in-eiw"/>
-                                    <constraint firstAttribute="trailing" secondItem="Tlq-Ws-Ofh" secondAttribute="trailing" id="eX4-0d-7Tb"/>
-                                </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-secondary-logo" translatesAutoresizingMaskIntoConstraints="NO" id="u2v-8a-orQ">
+                                <rect key="frame" x="98" y="169" width="218" height="66"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlq-Ws-Ofh">
+                                <rect key="frame" x="0.0" y="835" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vG1-Gr-xnx">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="60"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mop-pQ-IbM">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mop-pQ-IbM" firstAttribute="width" secondItem="vG1-Gr-xnx" secondAttribute="width" id="CoF-Kf-2Io"/>
+                                    <constraint firstAttribute="height" constant="60" id="HSD-bd-jGG"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tlq-Ws-Ofh" secondAttribute="trailing" id="0Tw-YN-B2u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tlq-Ws-Ofh" secondAttribute="bottom" constant="-33" id="2hw-Ly-V5F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dPh-75-bGP" secondAttribute="bottom" constant="-34" id="6ad-RK-bUu"/>
+                            <constraint firstItem="u2v-8a-orQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YTi-b7-Fwc"/>
                             <constraint firstItem="dPh-75-bGP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aVm-SY-Wrd"/>
-                            <constraint firstItem="dPh-75-bGP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="bqA-G8-3mr"/>
+                            <constraint firstItem="dPh-75-bGP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-50" id="bqA-G8-3mr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dPh-75-bGP" secondAttribute="trailing" id="eZK-KW-vFw"/>
+                            <constraint firstItem="Tlq-Ws-Ofh" firstAttribute="top" secondItem="u2v-8a-orQ" secondAttribute="bottom" constant="600" id="mEb-pD-u5o"/>
+                            <constraint firstItem="Tlq-Ws-Ofh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x7C-ui-JNV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="logInBtn" destination="vG1-Gr-xnx" id="KCY-2d-K7x"/>
                         <outlet property="signUpBtn" destination="mop-pQ-IbM" id="ttC-Lg-eAA"/>
+                        <outlet property="videoView" destination="dPh-75-bGP" id="IoJ-Ky-MgE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
