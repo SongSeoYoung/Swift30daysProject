@@ -167,3 +167,15 @@ https://github.com/soapyigu/Swift-30-Projects
 <img src="https://user-images.githubusercontent.com/42825223/107873942-7263fe80-6ef9-11eb-83b4-b01e36065146.gif" width=200></img>
 
   * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2015%20-%20SnapchatMenu)
+
+
+<br>
+<br>
+
+* ### [Project16](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2016%20-%20SpotifySignIn/Project%2016%20-%20SpotifySignIn)
+  * **Using AVFoundation**  
+
+  * **Screenshot✨**  
+<img src="https://user-images.githubusercontent.com/42825223/108584831-baff3a00-7387-11eb-97cb-86ec9453bbd4.gif" width=200></img>
+
+  * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2016%20-%20SpotifySignIn)
