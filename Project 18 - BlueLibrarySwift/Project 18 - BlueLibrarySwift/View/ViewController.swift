@@ -12,16 +12,18 @@ import Kingfisher
 
 class ViewController: UIViewController {
 
-   
-    @IBOutlet weak var collectionView: UICollectionView!
+    // MARK: - Properties
+    private let viewModel: maintableViewModel = maintableViewModel()
+    private var selectNumber: Int?
     
-    @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var genreLabel: UILabel!
-    @IBOutlet weak var albumLabel: UILabel!
-    @IBOutlet weak var artistLabel: UILabel!
-    let viewModel: maintableViewModel = maintableViewModel()
-    var selectNumber: Int?
+   // MARK: - IBOutlet
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var yearLabel: UILabel!
+    @IBOutlet private weak var genreLabel: UILabel!
+    @IBOutlet private weak var albumLabel: UILabel!
+    @IBOutlet private weak var artistLabel: UILabel!
     
+    // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.decode()
@@ -29,13 +31,19 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        yearLabel.text = viewModel.model?[0].year
-        artistLabel.text = viewModel.model?[0].artist
-        genreLabel.text = viewModel.model?[0].genre
-        albumLabel.text = viewModel.model?[0].title
+        setInitailUI()
     }
     
-    func setCollectionviewFlowLayout() {
+    // MARK: - Methods
+    private func setInitailUI () {
+        let initInfo = viewModel.setDetailInfo(0)
+        yearLabel.text = initInfo[0]
+        artistLabel.text = initInfo[1]
+        genreLabel.text = initInfo[2]
+        albumLabel.text = initInfo[3]
+    }
+    
+    private func setCollectionviewFlowLayout() {
         let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
         flowLayout.minimumLineSpacing = 25
@@ -44,46 +52,49 @@ class ViewController: UIViewController {
         self.collectionView.collectionViewLayout = flowLayout
     }
     
-    @IBAction func trashBtn(_ sender: Any) {
+    @IBAction private func trashBtn(_ sender: Any) {
         if let selectRowNumber = selectNumber {
             viewModel.addTashList(at: selectRowNumber)
         }
         collectionView.reloadData()
     }
-    @IBAction func undoBtn(_ sender: Any) {
+    @IBAction private func undoBtn(_ sender: Any) {
         viewModel.undoModel()
         collectionView.reloadData()
     }
-    
-    
 
 }
 
+// MARK: - UICollectionViewDelegate, DataSource
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.model?.count ?? 0
+        return viewModel.getModelCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: AlbumArtCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumArtCollectionViewCell", for: indexPath) as? AlbumArtCollectionViewCell else { return UICollectionViewCell() }
-        let url = URL(string: (viewModel.model?[indexPath.row].coverUrl)!)
+        let url = viewModel.getURL(indexPath.row) as? URL
         if let imageView = cell.albumArtImage {
             imageView.kf.setImage(with: url)
         }
+        
         cell.albumImageBackground.backgroundColor = .black
         if let number = selectNumber {
             if number == indexPath.row {
                 cell.albumImageBackground.backgroundColor = .white
             }
         }
+        
         return cell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        yearLabel.text = viewModel.model?[indexPath.row].year
-        artistLabel.text = viewModel.model?[indexPath.row].artist
-        genreLabel.text = viewModel.model?[indexPath.row].genre
-        albumLabel.text = viewModel.model?[indexPath.row].title
+        let detailInfo = viewModel.setDetailInfo(indexPath.row)
+        yearLabel.text = detailInfo[0]
+        artistLabel.text = detailInfo[1]
+        genreLabel.text = detailInfo[2]
+        albumLabel.text = detailInfo[3]
         selectNumber = indexPath.row
  
         collectionView.reloadData()
