@@ -3,7 +3,7 @@
     "title": "Opus 12",
     "artist": "Jay Chou",
     "genre": "Pop",
-    "coverUrl": "http://a2.att.hudong.com/88/93/19300001321437135520930453813.jpg",
+    "coverUrl": "https://theasianedition.files.wordpress.com/2012/12/jay-chou-opus-12.jpg",
     "year": "2012"
   }, 
   {
@@ -15,14 +15,14 @@
   }, 
   {
     "artist": "Justin Biber", 
-    "coverUrl": "https://consequenceofsound.files.wordpress.com/2015/08/screen-shot-2015-08-28-at-7-10-21-am.png?w=689", 
+    "coverUrl": "https://upload.wikimedia.org/wikipedia/en/9/9e/JustinBieberWhatDoYouMeanCover.png",
     "genre": "Pop", 
     "title": "What do you mean", 
     "year": "2014"
   }, 
   {
     "artist": "U2", 
-    "coverUrl": "https://s3.amazonaws.com/CoverProject/album/album_u2_staring_at_the_sun.png", 
+    "coverUrl": "https://www.u2songs.com/images/disco/_full/X1001-01.jpg",
     "genre": "Pop", 
     "title": "Staring at the Sun", 
     "year": "2000"

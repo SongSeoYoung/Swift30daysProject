@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-vc-7vP">
-                                <rect key="frame" x="0.0" y="44" width="414" height="185"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-vc-7vP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="195"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VmH-uP-hkU">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VmH-uP-hkU">
                                     <size key="itemSize" width="192" height="182"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -29,24 +29,25 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumArtCollectionViewCell" id="Xio-SQ-Y0K" customClass="AlbumArtCollectionViewCell" customModule="Project_18___BlueLibrarySwift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="192" height="182"/>
+                                        <rect key="frame" x="0.0" y="6.5" width="192" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="01m-jx-cw7">
                                             <rect key="frame" x="0.0" y="0.0" width="192" height="182"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-ls-Zlh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="192" height="182"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-ls-Zlh">
+                                                    <rect key="frame" x="3" y="3" width="186" height="176"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="yoi-ls-Zlh" secondAttribute="height" multiplier="1:1" id="3Mn-JB-diM"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="yoi-ls-Zlh" secondAttribute="bottom" id="IgG-Y3-bDh"/>
-                                                <constraint firstItem="yoi-ls-Zlh" firstAttribute="leading" secondItem="01m-jx-cw7" secondAttribute="leading" id="OLJ-lX-AaE"/>
-                                                <constraint firstAttribute="trailing" secondItem="yoi-ls-Zlh" secondAttribute="trailing" id="U9Q-ni-Hmo"/>
-                                                <constraint firstItem="yoi-ls-Zlh" firstAttribute="top" secondItem="01m-jx-cw7" secondAttribute="top" id="eLo-u2-4pG"/>
+                                                <constraint firstAttribute="bottom" secondItem="yoi-ls-Zlh" secondAttribute="bottom" constant="3" id="IgG-Y3-bDh"/>
+                                                <constraint firstItem="yoi-ls-Zlh" firstAttribute="leading" secondItem="01m-jx-cw7" secondAttribute="leading" constant="3" id="OLJ-lX-AaE"/>
+                                                <constraint firstAttribute="trailing" secondItem="yoi-ls-Zlh" secondAttribute="trailing" constant="3" id="U9Q-ni-Hmo"/>
+                                                <constraint firstItem="yoi-ls-Zlh" firstAttribute="top" secondItem="01m-jx-cw7" secondAttribute="top" constant="3" id="eLo-u2-4pG"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="192" height="182"/>
@@ -55,6 +56,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fa9-bu-xpR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jDS-FX-qFB"/>
+                                </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2YD-Gu-wHj">
                                 <rect key="frame" x="0.0" y="259" width="414" height="203"/>
@@ -177,14 +182,19 @@
                                 <rect key="frame" x="0.0" y="846" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnB-E6-odx">
-                                        <rect key="frame" x="310.5" y="10" width="73.5" height="30"/>
+                                        <rect key="frame" x="344" y="10" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="W7w-ci-lYb"/>
+                                        </constraints>
                                         <state key="normal" title="Button">
                                             <imageReference key="image" image="trash" catalog="system" symbolScale="medium"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWt-uy-6oX">
                                         <rect key="frame" x="45" y="10" width="37" height="30"/>
-                                        <state key="normal" title="Undo"/>
+                                        <state key="normal" title="Undo">
+                                            <color key="titleColor" systemColor="systemGray4Color"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -209,7 +219,7 @@
                             <constraint firstItem="f1w-ZZ-ojD" firstAttribute="top" secondItem="2YD-Gu-wHj" secondAttribute="bottom" constant="384" id="G9d-Lr-mM9"/>
                             <constraint firstAttribute="bottom" secondItem="f1w-ZZ-ojD" secondAttribute="bottom" id="Vk2-in-lAT"/>
                             <constraint firstItem="2YD-Gu-wHj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gQs-5p-QuS"/>
-                            <constraint firstItem="2YD-Gu-wHj" firstAttribute="top" secondItem="hGF-vc-7vP" secondAttribute="bottom" constant="30" id="glV-gD-Y0T"/>
+                            <constraint firstItem="2YD-Gu-wHj" firstAttribute="top" secondItem="hGF-vc-7vP" secondAttribute="bottom" constant="20" id="glV-gD-Y0T"/>
                             <constraint firstItem="f1w-ZZ-ojD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uho-LC-ilI"/>
                             <constraint firstItem="2YD-Gu-wHj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yLh-s2-Ssp"/>
                             <constraint firstItem="hGF-vc-7vP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yuE-vb-PBe"/>
@@ -229,6 +239,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="kingfisher-4.jpg" width="250" height="250"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -238,6 +249,9 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
