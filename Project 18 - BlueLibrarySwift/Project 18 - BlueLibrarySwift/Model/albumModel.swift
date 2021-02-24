@@ -8,13 +8,17 @@
 import Foundation
 
 struct albumModel: Codable {
-    var albumList: [Album]
-}
-
-struct Album: Codable {
     var title: String
     var artist: String
     var genre: String
-    var coverURL: String
+    var coverUrl: String
     var year: String
 }
+//
+//struct Album: Codable {
+//    var title: String
+//    var artist: String
+//    var genre: String
+//    var coverUrl: String
+//    var year: String
+//}
