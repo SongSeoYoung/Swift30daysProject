@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var albumLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     let viewModel: maintableViewModel = maintableViewModel()
+    var selectNumber: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,19 @@ class ViewController: UIViewController {
         flowLayout.scrollDirection = .horizontal
         self.collectionView.collectionViewLayout = flowLayout
     }
+    
+    @IBAction func trashBtn(_ sender: Any) {
+        if let selectRowNumber = selectNumber {
+            viewModel.addTashList(at: selectRowNumber)
+        }
+        collectionView.reloadData()
+    }
+    @IBAction func undoBtn(_ sender: Any) {
+        viewModel.undoModel()
+        collectionView.reloadData()
+    }
+    
+    
 
 }
 
@@ -58,6 +72,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         artistLabel.text = viewModel.model?[indexPath.row].artist
         genreLabel.text = viewModel.model?[indexPath.row].genre
         albumLabel.text = viewModel.model?[indexPath.row].title
+        selectNumber = indexPath.row
+        guard let cell: AlbumArtCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumArtCollectionViewCell", for: indexPath) as? AlbumArtCollectionViewCell else {return}
+        cell.albumImageBackground.backgroundColor = .white
+        collectionView.reloadData()
     }
     
 }

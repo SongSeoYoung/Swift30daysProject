@@ -9,5 +9,6 @@ import UIKit
 
 class AlbumArtCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var albumImageBackground: UIView!
     @IBOutlet weak var albumArtImage: UIImageView!
 }

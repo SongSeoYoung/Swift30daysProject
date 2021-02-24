@@ -20,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-vc-7vP">
                                 <rect key="frame" x="0.0" y="44" width="414" height="195"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VmH-uP-hkU">
                                     <size key="itemSize" width="192" height="182"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -35,24 +35,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="192" height="182"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-ls-Zlh">
-                                                    <rect key="frame" x="3" y="3" width="186" height="176"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ub4-3f-hyM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="192" height="182"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-ls-Zlh">
+                                                            <rect key="frame" x="5" y="5" width="182" height="172"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="yoi-ls-Zlh" secondAttribute="height" multiplier="1:1" id="3Mn-JB-diM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yoi-ls-Zlh" secondAttribute="trailing" constant="5" id="HoE-Hm-XDV"/>
+                                                        <constraint firstItem="yoi-ls-Zlh" firstAttribute="leading" secondItem="Ub4-3f-hyM" secondAttribute="leading" constant="5" id="bGf-gG-gJh"/>
+                                                        <constraint firstItem="yoi-ls-Zlh" firstAttribute="top" secondItem="Ub4-3f-hyM" secondAttribute="top" constant="5" id="r7y-oH-vsr"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yoi-ls-Zlh" secondAttribute="bottom" constant="5" id="vla-Yx-3UB"/>
                                                     </constraints>
-                                                </imageView>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="yoi-ls-Zlh" secondAttribute="bottom" constant="3" id="IgG-Y3-bDh"/>
-                                                <constraint firstItem="yoi-ls-Zlh" firstAttribute="leading" secondItem="01m-jx-cw7" secondAttribute="leading" constant="3" id="OLJ-lX-AaE"/>
-                                                <constraint firstAttribute="trailing" secondItem="yoi-ls-Zlh" secondAttribute="trailing" constant="3" id="U9Q-ni-Hmo"/>
-                                                <constraint firstItem="yoi-ls-Zlh" firstAttribute="top" secondItem="01m-jx-cw7" secondAttribute="top" constant="3" id="eLo-u2-4pG"/>
+                                                <constraint firstItem="Ub4-3f-hyM" firstAttribute="top" secondItem="01m-jx-cw7" secondAttribute="top" id="AHt-hq-Im3"/>
+                                                <constraint firstItem="Ub4-3f-hyM" firstAttribute="leading" secondItem="01m-jx-cw7" secondAttribute="leading" id="L1M-dD-PEv"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ub4-3f-hyM" secondAttribute="trailing" id="ehc-Kt-9TA"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ub4-3f-hyM" secondAttribute="bottom" id="sUU-rW-AI3"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="192" height="182"/>
                                         <connections>
                                             <outlet property="albumArtImage" destination="yoi-ls-Zlh" id="4yj-9Y-INd"/>
+                                            <outlet property="albumImageBackground" destination="Ub4-3f-hyM" id="BbE-Q0-Sly"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -189,12 +199,18 @@
                                         <state key="normal" title="Button">
                                             <imageReference key="image" image="trash" catalog="system" symbolScale="medium"/>
                                         </state>
+                                        <connections>
+                                            <action selector="trashBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rl1-G7-HDI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWt-uy-6oX">
                                         <rect key="frame" x="45" y="10" width="37" height="30"/>
                                         <state key="normal" title="Undo">
                                             <color key="titleColor" systemColor="systemGray4Color"/>
                                         </state>
+                                        <connections>
+                                            <action selector="undoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xzl-dI-ob5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -239,13 +255,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="kingfisher-4.jpg" width="250" height="250"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
