@@ -189,10 +189,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-ZZ-ojD">
-                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="826" width="414" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnB-E6-odx">
-                                        <rect key="frame" x="344" y="10" width="40" height="30"/>
+                                        <rect key="frame" x="344" y="10" width="40" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="W7w-ci-lYb"/>
                                         </constraints>
@@ -204,9 +204,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWt-uy-6oX">
-                                        <rect key="frame" x="45" y="10" width="37" height="30"/>
+                                        <rect key="frame" x="45" y="10" width="37" height="50"/>
                                         <state key="normal" title="Undo">
-                                            <color key="titleColor" systemColor="systemGray4Color"/>
+                                            <color key="titleColor" systemColor="systemBlueColor"/>
                                         </state>
                                         <connections>
                                             <action selector="undoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xzl-dI-ob5"/>
@@ -215,7 +215,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Gbt-cx-fb3"/>
+                                    <constraint firstAttribute="height" constant="70" id="Gbt-cx-fb3"/>
                                     <constraint firstItem="AnB-E6-odx" firstAttribute="centerY" secondItem="rWt-uy-6oX" secondAttribute="centerY" id="PEt-fx-gue"/>
                                     <constraint firstItem="rWt-uy-6oX" firstAttribute="top" secondItem="f1w-ZZ-ojD" secondAttribute="top" constant="10" id="REg-WV-tw6"/>
                                     <constraint firstAttribute="trailing" secondItem="AnB-E6-odx" secondAttribute="trailing" constant="30" id="Xj7-Fg-sU4"/>
@@ -232,7 +232,7 @@
                             <constraint firstItem="f1w-ZZ-ojD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="86N-Pf-o4N"/>
                             <constraint firstItem="hGF-vc-7vP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9FG-mv-iQP"/>
                             <constraint firstItem="hGF-vc-7vP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CZN-OH-hfy"/>
-                            <constraint firstItem="f1w-ZZ-ojD" firstAttribute="top" secondItem="2YD-Gu-wHj" secondAttribute="bottom" constant="384" id="G9d-Lr-mM9"/>
+                            <constraint firstItem="f1w-ZZ-ojD" firstAttribute="top" secondItem="2YD-Gu-wHj" secondAttribute="bottom" constant="364" id="G9d-Lr-mM9"/>
                             <constraint firstAttribute="bottom" secondItem="f1w-ZZ-ojD" secondAttribute="bottom" id="Vk2-in-lAT"/>
                             <constraint firstItem="2YD-Gu-wHj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gQs-5p-QuS"/>
                             <constraint firstItem="2YD-Gu-wHj" firstAttribute="top" secondItem="hGF-vc-7vP" secondAttribute="bottom" constant="20" id="glV-gD-Y0T"/>
@@ -259,11 +259,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

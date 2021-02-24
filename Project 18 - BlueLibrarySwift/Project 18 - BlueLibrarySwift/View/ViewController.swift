@@ -27,12 +27,18 @@ class ViewController: UIViewController {
         viewModel.decode()
         setCollectionviewFlowLayout()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        yearLabel.text = viewModel.model?[0].year
+        artistLabel.text = viewModel.model?[0].artist
+        genreLabel.text = viewModel.model?[0].genre
+        albumLabel.text = viewModel.model?[0].title
+    }
     
     func setCollectionviewFlowLayout() {
         let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
         flowLayout.minimumLineSpacing = 25
-//        flowLayout.minimumInteritemSpacing = 30
         flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width / 3) - 10, height: (UIScreen.main.bounds.width / 3) - 10)
         flowLayout.scrollDirection = .horizontal
         self.collectionView.collectionViewLayout = flowLayout
@@ -64,6 +70,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         if let imageView = cell.albumArtImage {
             imageView.kf.setImage(with: url)
         }
+        cell.albumImageBackground.backgroundColor = .black
+        if let number = selectNumber {
+            if number == indexPath.row {
+                cell.albumImageBackground.backgroundColor = .white
+            }
+        }
         return cell
     }
     
@@ -73,8 +85,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         genreLabel.text = viewModel.model?[indexPath.row].genre
         albumLabel.text = viewModel.model?[indexPath.row].title
         selectNumber = indexPath.row
-        guard let cell: AlbumArtCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumArtCollectionViewCell", for: indexPath) as? AlbumArtCollectionViewCell else {return}
-        cell.albumImageBackground.backgroundColor = .white
+ 
         collectionView.reloadData()
     }
     
