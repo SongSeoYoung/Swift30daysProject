@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct Model: Codable {
-    var GreenTeaLeaf: String
+struct photoModel: Codable {
+    var Maya: String
+    
 }

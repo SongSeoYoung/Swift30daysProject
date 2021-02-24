@@ -9,11 +9,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+//    @IBOutlet private weak var tableView: UITableView!
+
+    let viewModel: tableViewModel = tableViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print(viewModel.decodeURL())
     }
-
+    
 
 }
 
+extension ViewController: UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return cell
+    }
+
+}
