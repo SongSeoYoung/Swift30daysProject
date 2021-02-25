@@ -179,3 +179,13 @@ https://github.com/soapyigu/Swift-30-Projects
 <img src="https://user-images.githubusercontent.com/42825223/108584831-baff3a00-7387-11eb-97cb-86ec9453bbd4.gif" width=200></img>
 
   * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2016%20-%20SpotifySignIn)
+
+<br>
+<br>
+
+* ### [Project18](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2018%20-%20BlueLibrarySwift/Project%2018%20-%20BlueLibrarySwift)
+  * **MVVM Exampling**  
+
+  * **Screenshot✨**  
+<img src="https://user-images.githubusercontent.com/42825223/109098536-e48fdb00-7764-11eb-8c3c-9f0037cb032d.gif" width=200></img>
+
