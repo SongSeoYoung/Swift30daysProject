@@ -15,13 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.decode()
-//        setFlowLayout()
-        if let layout = mainCollectionView.collectionViewLayout as? PinterestLayout {
-            layout.delegate = self
-        }
+        setFlowLayout()
+
     }
     
-    //👇 쓰레기코드 👇
     func setFlowLayout() {
         let flowLayout = UICollectionViewFlowLayout()
 //        flowLayout.minimumLineSpacing = 5

@@ -97,7 +97,7 @@ class PinterestLayout: UICollectionViewLayout {
     override func layoutAttributesForElements(in rect: CGRect)
         -> [UICollectionViewLayoutAttributes]? {
       var visibleLayoutAttributes: [UICollectionViewLayoutAttributes] = []
-      
+      print(cache)
       // Loop through the cache and look for items in the rect
       for attributes in cache {
         if attributes.frame.intersects(rect) {      //교차하면 true
