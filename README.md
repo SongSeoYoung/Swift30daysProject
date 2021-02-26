@@ -195,7 +195,7 @@ https://github.com/soapyigu/Swift-30-Projects
 <br>
 
 * ### [Project19](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2019%20-%20Pinterest/Project%2019%20-%20Pinterest)
-  * **MVVM Exampling**  
+  * **Using customLayout, dynamicCollectionViewCellHeight 구현**  
 
   * **Screenshot✨**  
 <img src="https://user-images.githubusercontent.com/42825223/109262341-b84b8b80-7844-11eb-87ab-92b254cf8730.gif" width=200></img>
