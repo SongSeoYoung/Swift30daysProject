@@ -19,13 +19,8 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kgN-Lz-hIV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dhb-48-8fb">
-                                    <size key="itemSize" width="250" height="324"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Th2-G2-Fcg" customClass="PinterestLayout" customModule="Project_19___Pinterest" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mainCollectionViewCell" id="V3L-f9-Hlv" customClass="mainCollectionViewCell" customModule="Project_19___Pinterest" customModuleProvider="target">
                                         <rect key="frame" x="82" y="0.0" width="250" height="324"/>
@@ -37,24 +32,18 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMx-Bv-LZY">
                                                     <rect key="frame" x="0.0" y="0.0" width="250" height="324"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dyI-5K-GVY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="267"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="267" id="GFI-dc-ooO"/>
-                                                            </constraints>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dyI-5K-GVY">
+                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="254"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Little and Large" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pk6-8B-VpD">
-                                                            <rect key="frame" x="10" y="272" width="230" height="12"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <rect key="frame" x="10" y="259" width="230" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brian and Matt meet for the very first time." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5y-o7-V02">
-                                                            <rect key="frame" x="10" y="289" width="230" height="30"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="30" id="zKd-Nj-Gn1"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <rect key="frame" x="10" y="285.5" width="230" height="33.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -86,6 +75,7 @@
                                             <outlet property="captionLabel" destination="pk6-8B-VpD" id="JmM-Ya-oNP"/>
                                             <outlet property="commentLabel" destination="e5y-o7-V02" id="sl2-dD-i6m"/>
                                             <outlet property="imageView" destination="dyI-5K-GVY" id="3MW-tQ-W8F"/>
+                                            <outlet property="photoBackView" destination="FMx-Bv-LZY" id="sSR-vj-0Ml"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

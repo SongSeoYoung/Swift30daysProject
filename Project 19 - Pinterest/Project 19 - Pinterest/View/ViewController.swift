@@ -14,17 +14,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         viewModel.decode()
-        setFlowLayout()
+//        setFlowLayout()
+        if let layout = mainCollectionView.collectionViewLayout as? PinterestLayout {
+            layout.delegate = self
+        }
     }
     
+    //👇 쓰레기코드 👇
     func setFlowLayout() {
         let flowLayout = UICollectionViewFlowLayout()
 //        flowLayout.minimumLineSpacing = 5
-        flowLayout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width / 2) - 10, height: 150)
+        flowLayout.sectionInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+//        flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width / 2) - 10, height: 300)
+//        flowLayout.estimatedItemSize = CGSize(width: (UIScreen.main.bounds.width / 2) - 10, height: 300)
 //        flowLayout.scrollDirection = .vertical
+        flowLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.width / 2 - 10, height: 500)
         self.mainCollectionView.collectionViewLayout = flowLayout
     }
 
@@ -37,10 +42,13 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
         viewModel.getModelCount()
     }
 
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let cell = mainCollectionViewCell()
-//        cell.prepareForReuse()
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "mainCollectionViewCell", for: indexPath) as? mainCollectionViewCell {
+            print("setting size")
+            return cell.fittingSize()
+        }
+        return CGSize(width: 0, height: 0)
+    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "mainCollectionViewCell", for: indexPath) as? mainCollectionViewCell else { return UICollectionViewCell() }
@@ -49,9 +57,22 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
         if let photoNumber = viewModel.photosModel?[indexPath.row]["Photo"] {
             cell.imageView.image = UIImage(named: photoNumber)
         }
-   
+        cell.layer.cornerRadius = 12.0
         return cell
     }
 
 
+}
+
+// MARK: - PinterestLayoutDelegate
+// photo Hiehgt 를 반환하는 Extension
+extension ViewController: PinterestLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        let photo: UIImage?
+        if let photoNumber = viewModel.photosModel?[indexPath.row]["Photo"] {
+            photo = UIImage(named: photoNumber)
+            return photo?.size.height ?? 0
+        }
+        return 0
+    }
 }
