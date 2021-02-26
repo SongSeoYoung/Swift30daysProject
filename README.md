@@ -189,3 +189,15 @@ https://github.com/soapyigu/Swift-30-Projects
   * **Screenshot✨**  
 <img src="https://user-images.githubusercontent.com/42825223/109098536-e48fdb00-7764-11eb-8c3c-9f0037cb032d.gif" width=200></img>
 
+
+
+<br>
+<br>
+
+* ### [Project19](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2019%20-%20Pinterest/Project%2019%20-%20Pinterest)
+  * **MVVM Exampling**  
+
+  * **Screenshot✨**  
+<img src="https://user-images.githubusercontent.com/42825223/109262341-b84b8b80-7844-11eb-87ab-92b254cf8730.gif" width=200></img>
+
+  * [배운 점 정리](https://github.com/SongSeoYoung/Swift30daysProject/tree/master/Project%2019%20-%20Pinterest)
