@@ -70,6 +70,7 @@ extension ViewController: PinterestLayoutDelegate {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
@@ -77,24 +78,18 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
+    
+    //이게 cellForItemAt 보다 호출된다.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         print("size for item at")
         guard let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "mainCollectionViewCell", for: indexPath) as? mainCollectionViewCell else { return CGSize(width: 0, height: 0)}
-        let photo: UIImage?
-        let photoHeight: CGFloat?
-        guard let photoNumber = viewModel.photosModel?[indexPath.row]["Photo"] else {
-            return CGSize(width: 0, height: 0)
-        }
-        photo = UIImage(named: photoNumber)
-        photoHeight = photo?.size.height ?? 0
-        let contentHeight = cell.captionLabel.bounds.height + cell.commentLabel.bounds.height
+       
         cell.captionLabel.text = viewModel.photosModel?[indexPath.row]["Caption"]
         cell.commentLabel.text = viewModel.photosModel?[indexPath.row]["Comment"]
         if let photoNumber = viewModel.photosModel?[indexPath.row]["Photo"] {
             cell.imageView.image = UIImage(named: photoNumber)
         }
         return cell.photoBackView.systemLayoutSizeFitting(CGSize(width: UIScreen.main.bounds.width / 2 - 10, height: UIView.layoutFittingCompressedSize.height), withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel)
-//        print("image view height", photoHeight, "photoBackviewHeight", cell.photoBackView.bounds.height)
-//        return CGSize(width: UIScreen.main.bounds.width / 2 - 10, height: cell.photoBackView.bounds.height)
     }
+    
 }
