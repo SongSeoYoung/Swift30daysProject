@@ -21,12 +21,7 @@ class ViewController: UIViewController {
     
     func setFlowLayout() {
         let flowLayout = UICollectionViewFlowLayout()
-//        flowLayout.minimumLineSpacing = 5
         flowLayout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-//        flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width / 2) - 10, height: 300)
-//        flowLayout.estimatedItemSize = CGSize(width: (UIScreen.main.bounds.width / 2) - 10, height: 300)
-//        flowLayout.scrollDirection = .vertical
-//        flowLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.width / 2 - 10, height: 500)
         self.mainCollectionView.collectionViewLayout = flowLayout
     }
 
@@ -91,5 +86,4 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
         }
         return cell.photoBackView.systemLayoutSizeFitting(CGSize(width: UIScreen.main.bounds.width / 2 - 10, height: UIView.layoutFittingCompressedSize.height), withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel)
     }
-    
 }
