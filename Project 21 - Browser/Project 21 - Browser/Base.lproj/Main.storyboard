@@ -24,7 +24,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="textFieldDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="XdB-hX-HHy"/>
+                                            <action selector="textFieldDidEndOnExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Al4-Cs-M4D"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -101,6 +101,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backBtn" destination="E2f-ZE-bkp" id="AEQ-g4-nmd"/>
+                        <outlet property="forwardBtn" destination="OSu-mH-keS" id="9yr-Cl-tJ1"/>
                         <outlet property="textField" destination="NB7-HG-Wvx" id="tT0-9k-giz"/>
                         <outlet property="webView" destination="QI2-Ha-1Xc" id="a8Y-4Y-iw6"/>
                     </connections>
